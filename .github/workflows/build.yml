@@ -22,11 +22,6 @@ jobs:
         with:
           mxbuild-version: '9.18.2.55931'
           mx-version: '9.18.2'
-      - name: Print directories
-        run: |
-          ls ./mxbuilds
-          ls ./mxbuilds/mxbuild-9.18.2
-          ls ./mxbuilds/mxbuild-9.18.2/modeler
       - name: Execute MxBuild 9.18.2
         run: | 
           ./mxbuilds/mxbuild-9.18.2/modeler/mxbuild.exe \
@@ -36,4 +31,4 @@ jobs:
             --loose-version-check \
             --log-level=Debug \
             --output=./out/Test-MxBuild-9.18.2.mda \
-            ./project/Test MxBuild.mpr
+            "./project/Test MxBuild.mpr"
