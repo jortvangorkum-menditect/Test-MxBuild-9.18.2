@@ -1,0 +1,20 @@
+name: Download MxBuild
+description: Downloads the given mx build
+inputs:
+  mxbuild-version:
+    description: 'The mx build version. Example: 7.23.8.58888'
+    required: true
+  mx-version:
+    description: 'The Mendix version. Example: 7.23.8'
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Download MxBuilds ${{ inputs.mx-version }}
+      shell: bash
+      working-directory: mxbuilds
+      run: |
+        curl -L -O https://cdn.mendix.com/runtime/mxbuild-${{ inputs.mxbuild-version }}.tar.gz
+        mkdir mxbuild-${{ inputs.mx-version }}
+        tar -xzf mxbuild-${{ inputs.mxbuild-version }}.tar.gz -C mxbuild-${{ inputs.mx-version }}
+        rm mxbuild-${{ inputs.mxbuild-version }}.tar.gz

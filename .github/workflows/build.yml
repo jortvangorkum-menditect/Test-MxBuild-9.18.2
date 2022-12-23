@@ -1,0 +1,36 @@
+name: Build MPKs
+
+on:
+  push:
+    branches: [mains]
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'gradle'
+      - name: Download MxBuild 9.18.2
+        uses: ./.github/actions/download-mxbuild
+        with:
+          mxbuild-version: '9.18.2.55931'
+          mx-version: '9.18.2'
+      - name: Execute MxBuild 9.18.2
+        working-directory: ./mxbuilds/mx-build-9.18.2
+        run: | 
+          ./mxbuilds/mx-build-9.18.2/modeler/mxbuild.exe \
+            --java-home=${{ $JAVA_HOME }} \
+            --java-exe-path=${{ $JAVA_HOME }}/bin/java.exe \
+            --target=package \
+            --loose-version-check \
+            --log-level=Debug \
+            --output=./out/Test-MxBuild-9.18.2.mda
+            ./project/Test MxBuild.mpr
