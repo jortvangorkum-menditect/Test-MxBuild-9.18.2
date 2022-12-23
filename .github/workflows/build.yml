@@ -27,8 +27,8 @@ jobs:
         working-directory: ./mxbuilds/mx-build-9.18.2
         run: | 
           ./mxbuilds/mx-build-9.18.2/modeler/mxbuild.exe \
-            --java-home=${{ $JAVA_HOME }} \
-            --java-exe-path=${{ $JAVA_HOME }}/bin/java.exe \
+            --java-home=$JAVA_HOME \
+            --java-exe-path=$JAVA_HOME/bin/java.exe \
             --target=package \
             --loose-version-check \
             --log-level=Debug \
