@@ -25,11 +25,11 @@ jobs:
       - name: Print directories
         run: |
           ls ./mxbuilds
-          ls ./mxbuilds/mx-build-9.18.2
-          ls ./mxbuilds/mx-build-9.18.2/modeler
+          ls ./mxbuilds/mxbuild-9.18.2
+          ls ./mxbuilds/mxbuild-9.18.2/modeler
       - name: Execute MxBuild 9.18.2
         run: | 
-          ./mxbuilds/mx-build-9.18.2/modeler/mxbuild.exe \
+          ./mxbuilds/mxbuild-9.18.2/modeler/mxbuild.exe \
             --java-home=$JAVA_HOME \
             --java-exe-path=$JAVA_HOME/bin/java.exe \
             --target=package \
