@@ -1,0 +1,647 @@
+2022-12-23T10:40:02.3750031Z Requested labels: windows-latest
+2022-12-23T10:40:02.3750065Z Job defined at: jortvangorkum-menditect/Test-MxBuild-9.18.2/.github/workflows/build.yml@refs/heads/main
+2022-12-23T10:40:02.3750086Z Waiting for a runner to pick up this job...
+2022-12-23T10:40:02.5706327Z Job is waiting for a hosted runner to come online.
+2022-12-23T10:40:14.8436485Z Job is about to start running on the hosted runner: Hosted Agent (hosted)
+2022-12-23T10:40:20.5796503Z Current runner version: '2.299.1'
+2022-12-23T10:40:20.5826642Z ##[group]Operating System
+2022-12-23T10:40:20.5827312Z Microsoft Windows Server 2022
+2022-12-23T10:40:20.5827676Z 10.0.20348
+2022-12-23T10:40:20.5827945Z Datacenter
+2022-12-23T10:40:20.5828293Z ##[endgroup]
+2022-12-23T10:40:20.5828639Z ##[group]Runner Image
+2022-12-23T10:40:20.5828965Z Image: windows-2022
+2022-12-23T10:40:20.5829312Z Version: 20221215.2
+2022-12-23T10:40:20.5829930Z Included Software: https://github.com/actions/runner-images/blob/win22/20221215.2/images/win/Windows2022-Readme.md
+2022-12-23T10:40:20.5830604Z Image Release: https://github.com/actions/runner-images/releases/tag/win22%2F20221215.2
+2022-12-23T10:40:20.5831086Z ##[endgroup]
+2022-12-23T10:40:20.5831453Z ##[group]Runner Image Provisioner
+2022-12-23T10:40:20.5831808Z 2.0.91.1
+2022-12-23T10:40:20.5832067Z ##[endgroup]
+2022-12-23T10:40:20.5833147Z ##[group]GITHUB_TOKEN Permissions
+2022-12-23T10:40:20.5833796Z Actions: write
+2022-12-23T10:40:20.5834300Z Checks: write
+2022-12-23T10:40:20.5834663Z Contents: write
+2022-12-23T10:40:20.5835012Z Deployments: write
+2022-12-23T10:40:20.5835352Z Discussions: write
+2022-12-23T10:40:20.5835689Z Issues: write
+2022-12-23T10:40:20.5836033Z Metadata: read
+2022-12-23T10:40:20.5836322Z Packages: write
+2022-12-23T10:40:20.5836654Z Pages: write
+2022-12-23T10:40:20.5836994Z PullRequests: write
+2022-12-23T10:40:20.5837329Z RepositoryProjects: write
+2022-12-23T10:40:20.5837732Z SecurityEvents: write
+2022-12-23T10:40:20.5838089Z Statuses: write
+2022-12-23T10:40:20.5838373Z ##[endgroup]
+2022-12-23T10:40:20.5842408Z Secret source: Actions
+2022-12-23T10:40:20.5843072Z Prepare workflow directory
+2022-12-23T10:40:20.7036067Z Prepare all required actions
+2022-12-23T10:40:20.7293066Z Getting action download info
+2022-12-23T10:40:21.0080808Z Download action repository 'actions/checkout@v3' (SHA:755da8c3cf115ac066823e79a1e1788f8940201b)
+2022-12-23T10:40:21.4346614Z Download action repository 'actions/setup-java@v3' (SHA:1df8dbefe2a8cbc99770194893dd902763bee34b)
+2022-12-23T10:40:22.3697431Z ##[group]Run actions/checkout@v3
+2022-12-23T10:40:22.3697843Z with:
+2022-12-23T10:40:22.3698185Z   repository: jortvangorkum-menditect/Test-MxBuild-9.18.2
+2022-12-23T10:40:22.3698788Z   token: ***
+2022-12-23T10:40:22.3699005Z   ssh-strict: true
+2022-12-23T10:40:22.3699271Z   persist-credentials: true
+2022-12-23T10:40:22.3699542Z   clean: true
+2022-12-23T10:40:22.3699751Z   fetch-depth: 1
+2022-12-23T10:40:22.3699976Z   lfs: false
+2022-12-23T10:40:22.3700202Z   submodules: false
+2022-12-23T10:40:22.3700446Z   set-safe-directory: true
+2022-12-23T10:40:22.3700719Z ##[endgroup]
+2022-12-23T10:40:29.1339812Z Syncing repository: jortvangorkum-menditect/Test-MxBuild-9.18.2
+2022-12-23T10:40:29.1468449Z ##[group]Getting Git version info
+2022-12-23T10:40:29.1469390Z Working directory is 'D:\a\Test-MxBuild-9.18.2\Test-MxBuild-9.18.2'
+2022-12-23T10:40:29.3035527Z [command]"C:\Program Files\Git\bin\git.exe" version
+2022-12-23T10:40:29.9386124Z git version 2.39.0.windows.1
+2022-12-23T10:40:29.9455768Z ##[endgroup]
+2022-12-23T10:40:29.9480513Z Temporarily overriding HOME='D:\a\_temp\3dfad399-77ad-49c9-afca-a7bd611616d9' before making global git config changes
+2022-12-23T10:40:29.9499854Z Adding repository directory to the temporary git global config as a safe directory
+2022-12-23T10:40:29.9501146Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Test-MxBuild-9.18.2\Test-MxBuild-9.18.2
+2022-12-23T10:40:30.0486446Z Deleting the contents of 'D:\a\Test-MxBuild-9.18.2\Test-MxBuild-9.18.2'
+2022-12-23T10:40:30.0495125Z ##[group]Initializing the repository
+2022-12-23T10:40:30.0523397Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\Test-MxBuild-9.18.2\Test-MxBuild-9.18.2
+2022-12-23T10:40:30.1733046Z Initialized empty Git repository in D:/a/Test-MxBuild-9.18.2/Test-MxBuild-9.18.2/.git/
+2022-12-23T10:40:30.1769748Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/jortvangorkum-menditect/Test-MxBuild-9.18.2
+2022-12-23T10:40:30.2522256Z ##[endgroup]
+2022-12-23T10:40:30.2526791Z ##[group]Disabling automatic garbage collection
+2022-12-23T10:40:30.2552290Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2022-12-23T10:40:30.2878465Z ##[endgroup]
+2022-12-23T10:40:30.2879192Z ##[group]Setting up auth
+2022-12-23T10:40:30.2897707Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2022-12-23T10:40:30.3288163Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2022-12-23T10:40:32.9476973Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2022-12-23T10:40:32.9849187Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2022-12-23T10:40:33.6419683Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2022-12-23T10:40:33.6765531Z ##[endgroup]
+2022-12-23T10:40:33.6766249Z ##[group]Fetching the repository
+2022-12-23T10:40:33.6781019Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +37f676ef175d9577347588fe27b7a29d8c3459e6:refs/remotes/origin/main
+2022-12-23T10:40:35.1500913Z remote: Enumerating objects: 434, done.        
+2022-12-23T10:40:35.1501757Z remote: Counting objects:   0% (1/434)        
+2022-12-23T10:40:35.1502473Z remote: Counting objects:   1% (5/434)        
+2022-12-23T10:40:35.1503096Z remote: Counting objects:   2% (9/434)        
+2022-12-23T10:40:35.1503700Z remote: Counting objects:   3% (14/434)        
+2022-12-23T10:40:35.1506228Z remote: Counting objects:   4% (18/434)        
+2022-12-23T10:40:35.1507934Z remote: Counting objects:   5% (22/434)        
+2022-12-23T10:40:35.1508502Z remote: Counting objects:   6% (27/434)        
+2022-12-23T10:40:35.1508849Z remote: Counting objects:   7% (31/434)        
+2022-12-23T10:40:35.1509205Z remote: Counting objects:   8% (35/434)        
+2022-12-23T10:40:35.1509563Z remote: Counting objects:   9% (40/434)        
+2022-12-23T10:40:35.1509945Z remote: Counting objects:  10% (44/434)        
+2022-12-23T10:40:35.1510283Z remote: Counting objects:  11% (48/434)        
+2022-12-23T10:40:35.1510643Z remote: Counting objects:  12% (53/434)        
+2022-12-23T10:40:35.1510994Z remote: Counting objects:  13% (57/434)        
+2022-12-23T10:40:35.1511326Z remote: Counting objects:  14% (61/434)        
+2022-12-23T10:40:35.1511677Z remote: Counting objects:  15% (66/434)        
+2022-12-23T10:40:35.1512025Z remote: Counting objects:  16% (70/434)        
+2022-12-23T10:40:35.1512389Z remote: Counting objects:  17% (74/434)        
+2022-12-23T10:40:35.1512722Z remote: Counting objects:  18% (79/434)        
+2022-12-23T10:40:35.1513176Z remote: Counting objects:  19% (83/434)        
+2022-12-23T10:40:35.1513522Z remote: Counting objects:  20% (87/434)        
+2022-12-23T10:40:35.1513873Z remote: Counting objects:  21% (92/434)        
+2022-12-23T10:40:35.1514207Z remote: Counting objects:  22% (96/434)        
+2022-12-23T10:40:35.1514559Z remote: Counting objects:  23% (100/434)        
+2022-12-23T10:40:35.1514921Z remote: Counting objects:  24% (105/434)        
+2022-12-23T10:40:35.1515431Z remote: Counting objects:  25% (109/434)        
+2022-12-23T10:40:35.1515903Z remote: Counting objects:  26% (113/434)        
+2022-12-23T10:40:35.1516387Z remote: Counting objects:  27% (118/434)        
+2022-12-23T10:40:35.1516776Z remote: Counting objects:  28% (122/434)        
+2022-12-23T10:40:35.1517119Z remote: Counting objects:  29% (126/434)        
+2022-12-23T10:40:35.1518682Z remote: Counting objects:  30% (131/434)        
+2022-12-23T10:40:35.1519042Z remote: Counting objects:  31% (135/434)        
+2022-12-23T10:40:35.1519565Z remote: Counting objects:  32% (139/434)        
+2022-12-23T10:40:35.1519922Z remote: Counting objects:  33% (144/434)        
+2022-12-23T10:40:35.1520534Z remote: Counting objects:  34% (148/434)        
+2022-12-23T10:40:35.1520936Z remote: Counting objects:  35% (152/434)        
+2022-12-23T10:40:35.1521293Z remote: Counting objects:  36% (157/434)        
+2022-12-23T10:40:35.1521637Z remote: Counting objects:  37% (161/434)        
+2022-12-23T10:40:35.1521994Z remote: Counting objects:  38% (165/434)        
+2022-12-23T10:40:35.1522346Z remote: Counting objects:  39% (170/434)        
+2022-12-23T10:40:35.1522859Z remote: Counting objects:  40% (174/434)        
+2022-12-23T10:40:35.1523217Z remote: Counting objects:  41% (178/434)        
+2022-12-23T10:40:35.1523570Z remote: Counting objects:  42% (183/434)        
+2022-12-23T10:40:35.1523930Z remote: Counting objects:  43% (187/434)        
+2022-12-23T10:40:35.1524280Z remote: Counting objects:  44% (191/434)        
+2022-12-23T10:40:35.1524615Z remote: Counting objects:  45% (196/434)        
+2022-12-23T10:40:35.1524966Z remote: Counting objects:  46% (200/434)        
+2022-12-23T10:40:35.1525314Z remote: Counting objects:  47% (204/434)        
+2022-12-23T10:40:35.1525749Z remote: Counting objects:  48% (209/434)        
+2022-12-23T10:40:35.1526118Z remote: Counting objects:  49% (213/434)        
+2022-12-23T10:40:35.1526463Z remote: Counting objects:  50% (217/434)        
+2022-12-23T10:40:35.1526809Z remote: Counting objects:  51% (222/434)        
+2022-12-23T10:40:35.1527142Z remote: Counting objects:  52% (226/434)        
+2022-12-23T10:40:35.1527488Z remote: Counting objects:  53% (231/434)        
+2022-12-23T10:40:35.1527837Z remote: Counting objects:  54% (235/434)        
+2022-12-23T10:40:35.1528183Z remote: Counting objects:  55% (239/434)        
+2022-12-23T10:40:35.1529088Z remote: Counting objects:  56% (244/434)        
+2022-12-23T10:40:35.1529475Z remote: Counting objects:  57% (248/434)        
+2022-12-23T10:40:35.1529825Z remote: Counting objects:  58% (252/434)        
+2022-12-23T10:40:35.1530177Z remote: Counting objects:  59% (257/434)        
+2022-12-23T10:40:35.1530515Z remote: Counting objects:  60% (261/434)        
+2022-12-23T10:40:35.1530864Z remote: Counting objects:  61% (265/434)        
+2022-12-23T10:40:35.1531572Z remote: Counting objects:  62% (270/434)        
+2022-12-23T10:40:35.1531944Z remote: Counting objects:  63% (274/434)        
+2022-12-23T10:40:35.1532298Z remote: Counting objects:  64% (278/434)        
+2022-12-23T10:40:35.1532650Z remote: Counting objects:  65% (283/434)        
+2022-12-23T10:40:35.1533151Z remote: Counting objects:  66% (287/434)        
+2022-12-23T10:40:35.1533687Z remote: Counting objects:  67% (291/434)        
+2022-12-23T10:40:35.1534044Z remote: Counting objects:  68% (296/434)        
+2022-12-23T10:40:35.1534407Z remote: Counting objects:  69% (300/434)        
+2022-12-23T10:40:35.1534753Z remote: Counting objects:  70% (304/434)        
+2022-12-23T10:40:35.1535087Z remote: Counting objects:  71% (309/434)        
+2022-12-23T10:40:35.1535433Z remote: Counting objects:  72% (313/434)        
+2022-12-23T10:40:35.1535778Z remote: Counting objects:  73% (317/434)        
+2022-12-23T10:40:35.1536109Z remote: Counting objects:  74% (322/434)        
+2022-12-23T10:40:35.1536456Z remote: Counting objects:  75% (326/434)        
+2022-12-23T10:40:35.1536800Z remote: Counting objects:  76% (330/434)        
+2022-12-23T10:40:35.1537180Z remote: Counting objects:  77% (335/434)        
+2022-12-23T10:40:35.1537535Z remote: Counting objects:  78% (339/434)        
+2022-12-23T10:40:35.1537883Z remote: Counting objects:  79% (343/434)        
+2022-12-23T10:40:35.1538234Z remote: Counting objects:  80% (348/434)        
+2022-12-23T10:40:35.1538587Z remote: Counting objects:  81% (352/434)        
+2022-12-23T10:40:35.1539048Z remote: Counting objects:  82% (356/434)        
+2022-12-23T10:40:35.1539395Z remote: Counting objects:  83% (361/434)        
+2022-12-23T10:40:35.1539745Z remote: Counting objects:  84% (365/434)        
+2022-12-23T10:40:35.1540097Z remote: Counting objects:  85% (369/434)        
+2022-12-23T10:40:35.1540436Z remote: Counting objects:  86% (374/434)        
+2022-12-23T10:40:35.1540785Z remote: Counting objects:  87% (378/434)        
+2022-12-23T10:40:35.1541133Z remote: Counting objects:  88% (382/434)        
+2022-12-23T10:40:35.1541471Z remote: Counting objects:  89% (387/434)        
+2022-12-23T10:40:35.1541818Z remote: Counting objects:  90% (391/434)        
+2022-12-23T10:40:35.1542164Z remote: Counting objects:  91% (395/434)        
+2022-12-23T10:40:35.1542510Z remote: Counting objects:  92% (400/434)        
+2022-12-23T10:40:35.1542846Z remote: Counting objects:  93% (404/434)        
+2022-12-23T10:40:35.1543192Z remote: Counting objects:  94% (408/434)        
+2022-12-23T10:40:35.1543545Z remote: Counting objects:  95% (413/434)        
+2022-12-23T10:40:35.1543915Z remote: Counting objects:  96% (417/434)        
+2022-12-23T10:40:35.1544263Z remote: Counting objects:  97% (421/434)        
+2022-12-23T10:40:35.1544811Z remote: Counting objects:  98% (426/434)        
+2022-12-23T10:40:35.1545120Z remote: Counting objects:  99% (430/434)        
+2022-12-23T10:40:35.1545428Z remote: Counting objects: 100% (434/434)        
+2022-12-23T10:40:35.1546586Z remote: Counting objects: 100% (434/434), done.        
+2022-12-23T10:40:35.1547144Z remote: Compressing objects:   0% (1/272)        
+2022-12-23T10:40:35.1549198Z remote: Compressing objects:   1% (3/272)        
+2022-12-23T10:40:35.1549594Z remote: Compressing objects:   2% (6/272)        
+2022-12-23T10:40:35.1549958Z remote: Compressing objects:   3% (9/272)        
+2022-12-23T10:40:35.1550337Z remote: Compressing objects:   4% (11/272)        
+2022-12-23T10:40:35.1550714Z remote: Compressing objects:   5% (14/272)        
+2022-12-23T10:40:35.1551271Z remote: Compressing objects:   6% (17/272)        
+2022-12-23T10:40:35.1551634Z remote: Compressing objects:   7% (20/272)        
+2022-12-23T10:40:35.1552277Z remote: Compressing objects:   8% (22/272)        
+2022-12-23T10:40:35.1552650Z remote: Compressing objects:   9% (25/272)        
+2022-12-23T10:40:35.1553016Z remote: Compressing objects:  10% (28/272)        
+2022-12-23T10:40:35.1553367Z remote: Compressing objects:  11% (30/272)        
+2022-12-23T10:40:35.1553736Z remote: Compressing objects:  12% (33/272)        
+2022-12-23T10:40:35.1554108Z remote: Compressing objects:  13% (36/272)        
+2022-12-23T10:40:35.1554625Z remote: Compressing objects:  14% (39/272)        
+2022-12-23T10:40:35.1555098Z remote: Compressing objects:  15% (41/272)        
+2022-12-23T10:40:35.1555489Z remote: Compressing objects:  16% (44/272)        
+2022-12-23T10:40:35.1555855Z remote: Compressing objects:  17% (47/272)        
+2022-12-23T10:40:35.1556209Z remote: Compressing objects:  18% (49/272)        
+2022-12-23T10:40:35.1556583Z remote: Compressing objects:  19% (52/272)        
+2022-12-23T10:40:35.1556945Z remote: Compressing objects:  20% (55/272)        
+2022-12-23T10:40:35.1557308Z remote: Compressing objects:  21% (58/272)        
+2022-12-23T10:40:35.1557657Z remote: Compressing objects:  22% (60/272)        
+2022-12-23T10:40:35.1558030Z remote: Compressing objects:  23% (63/272)        
+2022-12-23T10:40:35.1558393Z remote: Compressing objects:  24% (66/272)        
+2022-12-23T10:40:35.1558758Z remote: Compressing objects:  25% (68/272)        
+2022-12-23T10:40:35.1559105Z remote: Compressing objects:  26% (71/272)        
+2022-12-23T10:40:35.1559474Z remote: Compressing objects:  27% (74/272)        
+2022-12-23T10:40:35.1560183Z remote: Compressing objects:  28% (77/272)        
+2022-12-23T10:40:35.1560551Z remote: Compressing objects:  29% (79/272)        
+2022-12-23T10:40:35.1561186Z remote: Compressing objects:  30% (82/272)        
+2022-12-23T10:40:35.1562381Z remote: Compressing objects:  31% (85/272)        
+2022-12-23T10:40:35.1563044Z remote: Compressing objects:  32% (88/272)        
+2022-12-23T10:40:35.1563554Z remote: Compressing objects:  33% (90/272)        
+2022-12-23T10:40:35.1564074Z remote: Compressing objects:  34% (93/272)        
+2022-12-23T10:40:35.1564615Z remote: Compressing objects:  35% (96/272)        
+2022-12-23T10:40:35.1565120Z remote: Compressing objects:  36% (98/272)        
+2022-12-23T10:40:35.1565614Z remote: Compressing objects:  37% (101/272)        
+2022-12-23T10:40:35.1566137Z remote: Compressing objects:  38% (104/272)        
+2022-12-23T10:40:35.1566713Z remote: Compressing objects:  39% (107/272)        
+2022-12-23T10:40:35.1567222Z remote: Compressing objects:  40% (109/272)        
+2022-12-23T10:40:35.1567705Z remote: Compressing objects:  41% (112/272)        
+2022-12-23T10:40:35.1568220Z remote: Compressing objects:  42% (115/272)        
+2022-12-23T10:40:35.1568730Z remote: Compressing objects:  43% (117/272)        
+2022-12-23T10:40:35.1569248Z remote: Compressing objects:  44% (120/272)        
+2022-12-23T10:40:35.1569735Z remote: Compressing objects:  45% (123/272)        
+2022-12-23T10:40:35.1570246Z remote: Compressing objects:  46% (126/272)        
+2022-12-23T10:40:35.1570752Z remote: Compressing objects:  47% (128/272)        
+2022-12-23T10:40:35.1571237Z remote: Compressing objects:  48% (131/272)        
+2022-12-23T10:40:35.1572331Z remote: Compressing objects:  49% (134/272)        
+2022-12-23T10:40:35.1572938Z remote: Compressing objects:  50% (136/272)        
+2022-12-23T10:40:35.1573454Z remote: Compressing objects:  51% (139/272)        
+2022-12-23T10:40:35.1573941Z remote: Compressing objects:  52% (142/272)        
+2022-12-23T10:40:35.1574450Z remote: Compressing objects:  53% (145/272)        
+2022-12-23T10:40:35.1574955Z remote: Compressing objects:  54% (147/272)        
+2022-12-23T10:40:35.1575453Z remote: Compressing objects:  55% (150/272)        
+2022-12-23T10:40:35.1576179Z remote: Compressing objects:  56% (153/272)        
+2022-12-23T10:40:35.1576699Z remote: Compressing objects:  57% (156/272)        
+2022-12-23T10:40:35.1577200Z remote: Compressing objects:  58% (158/272)        
+2022-12-23T10:40:35.1577702Z remote: Compressing objects:  59% (161/272)        
+2022-12-23T10:40:35.1578527Z remote: Compressing objects:  60% (164/272)        
+2022-12-23T10:40:35.1578931Z remote: Compressing objects:  61% (166/272)        
+2022-12-23T10:40:35.1579311Z remote: Compressing objects:  62% (169/272)        
+2022-12-23T10:40:35.1579638Z remote: Compressing objects:  63% (172/272)        
+2022-12-23T10:40:35.1579972Z remote: Compressing objects:  64% (175/272)        
+2022-12-23T10:40:35.1580366Z remote: Compressing objects:  65% (177/272)        
+2022-12-23T10:40:35.1580734Z remote: Compressing objects:  66% (180/272)        
+2022-12-23T10:40:35.1581092Z remote: Compressing objects:  67% (183/272)        
+2022-12-23T10:40:35.1581472Z remote: Compressing objects:  68% (185/272)        
+2022-12-23T10:40:35.1581858Z remote: Compressing objects:  69% (188/272)        
+2022-12-23T10:40:35.1582397Z remote: Compressing objects:  70% (191/272)        
+2022-12-23T10:40:35.1582712Z remote: Compressing objects:  71% (194/272)        
+2022-12-23T10:40:35.1583226Z remote: Compressing objects:  72% (196/272)        
+2022-12-23T10:40:35.1583597Z remote: Compressing objects:  73% (199/272)        
+2022-12-23T10:40:35.1583967Z remote: Compressing objects:  74% (202/272)        
+2022-12-23T10:40:35.1584325Z remote: Compressing objects:  75% (204/272)        
+2022-12-23T10:40:35.1584692Z remote: Compressing objects:  76% (207/272)        
+2022-12-23T10:40:35.1585059Z remote: Compressing objects:  77% (210/272)        
+2022-12-23T10:40:35.1585410Z remote: Compressing objects:  78% (213/272)        
+2022-12-23T10:40:35.1585778Z remote: Compressing objects:  79% (215/272)        
+2022-12-23T10:40:35.1586257Z remote: Compressing objects:  80% (218/272)        
+2022-12-23T10:40:35.1587360Z remote: Compressing objects:  81% (221/272)        
+2022-12-23T10:40:35.1587717Z remote: Compressing objects:  82% (224/272)        
+2022-12-23T10:40:35.1588476Z remote: Compressing objects:  83% (226/272)        
+2022-12-23T10:40:35.1588862Z remote: Compressing objects:  84% (229/272)        
+2022-12-23T10:40:35.1589569Z remote: Compressing objects:  85% (232/272)        
+2022-12-23T10:40:35.1589920Z remote: Compressing objects:  86% (234/272)        
+2022-12-23T10:40:35.1590290Z remote: Compressing objects:  87% (237/272)        
+2022-12-23T10:40:35.1590699Z remote: Compressing objects:  88% (240/272)        
+2022-12-23T10:40:35.1591067Z remote: Compressing objects:  89% (243/272)        
+2022-12-23T10:40:35.1591414Z remote: Compressing objects:  90% (245/272)        
+2022-12-23T10:40:35.1591784Z remote: Compressing objects:  91% (248/272)        
+2022-12-23T10:40:35.1592152Z remote: Compressing objects:  92% (251/272)        
+2022-12-23T10:40:35.1592502Z remote: Compressing objects:  93% (253/272)        
+2022-12-23T10:40:35.1592875Z remote: Compressing objects:  94% (256/272)        
+2022-12-23T10:40:35.1593268Z remote: Compressing objects:  95% (259/272)        
+2022-12-23T10:40:35.1593630Z remote: Compressing objects:  96% (262/272)        
+2022-12-23T10:40:35.1593983Z remote: Compressing objects:  97% (264/272)        
+2022-12-23T10:40:35.1595939Z remote: Compressing objects:  98% (267/272)        
+2022-12-23T10:40:35.1597414Z remote: Compressing objects:  99% (270/272)        
+2022-12-23T10:40:35.1612890Z remote: Compressing objects: 100% (272/272)        
+2022-12-23T10:40:35.1614511Z remote: Compressing objects: 100% (272/272), done.        
+2022-12-23T10:40:35.2317353Z Receiving objects:   0% (1/434)
+2022-12-23T10:40:35.2317982Z Receiving objects:   1% (5/434)
+2022-12-23T10:40:35.2318341Z Receiving objects:   2% (9/434)
+2022-12-23T10:40:35.4284201Z Receiving objects:   3% (14/434)
+2022-12-23T10:40:35.4310433Z Receiving objects:   4% (18/434)
+2022-12-23T10:40:35.4377889Z Receiving objects:   5% (22/434)
+2022-12-23T10:40:35.4400339Z Receiving objects:   6% (27/434)
+2022-12-23T10:40:35.4430068Z Receiving objects:   7% (31/434)
+2022-12-23T10:40:35.4467970Z Receiving objects:   8% (35/434)
+2022-12-23T10:40:35.4480660Z Receiving objects:   9% (40/434)
+2022-12-23T10:40:35.4481075Z Receiving objects:  10% (44/434)
+2022-12-23T10:40:35.4481406Z Receiving objects:  11% (48/434)
+2022-12-23T10:40:35.4485087Z Receiving objects:  12% (53/434)
+2022-12-23T10:40:35.4485484Z Receiving objects:  13% (57/434)
+2022-12-23T10:40:35.4485830Z Receiving objects:  14% (61/434)
+2022-12-23T10:40:35.4486152Z Receiving objects:  15% (66/434)
+2022-12-23T10:40:35.4486486Z Receiving objects:  16% (70/434)
+2022-12-23T10:40:35.4486824Z Receiving objects:  17% (74/434)
+2022-12-23T10:40:35.4487160Z Receiving objects:  18% (79/434)
+2022-12-23T10:40:35.4488835Z Receiving objects:  19% (83/434)
+2022-12-23T10:40:35.4489233Z Receiving objects:  20% (87/434)
+2022-12-23T10:40:35.4489565Z Receiving objects:  21% (92/434)
+2022-12-23T10:40:35.4489892Z Receiving objects:  22% (96/434)
+2022-12-23T10:40:35.4490223Z Receiving objects:  23% (100/434)
+2022-12-23T10:40:35.4490544Z Receiving objects:  24% (105/434)
+2022-12-23T10:40:35.4490865Z Receiving objects:  25% (109/434)
+2022-12-23T10:40:35.4491260Z Receiving objects:  26% (113/434)
+2022-12-23T10:40:35.4491577Z Receiving objects:  27% (118/434)
+2022-12-23T10:40:35.4494704Z Receiving objects:  28% (122/434)
+2022-12-23T10:40:35.4495269Z Receiving objects:  29% (126/434)
+2022-12-23T10:40:35.4495603Z Receiving objects:  30% (131/434)
+2022-12-23T10:40:35.4495942Z Receiving objects:  31% (135/434)
+2022-12-23T10:40:35.4496283Z Receiving objects:  32% (139/434)
+2022-12-23T10:40:35.4496604Z Receiving objects:  33% (144/434)
+2022-12-23T10:40:35.4496938Z Receiving objects:  34% (148/434)
+2022-12-23T10:40:35.4576680Z Receiving objects:  35% (152/434)
+2022-12-23T10:40:35.4598618Z Receiving objects:  36% (157/434)
+2022-12-23T10:40:35.4602186Z Receiving objects:  37% (161/434)
+2022-12-23T10:40:35.4607101Z Receiving objects:  38% (165/434)
+2022-12-23T10:40:35.4607839Z Receiving objects:  39% (170/434)
+2022-12-23T10:40:35.4608258Z Receiving objects:  40% (174/434)
+2022-12-23T10:40:35.4609811Z Receiving objects:  41% (178/434)
+2022-12-23T10:40:35.4610634Z Receiving objects:  42% (183/434)
+2022-12-23T10:40:35.4614158Z Receiving objects:  43% (187/434)
+2022-12-23T10:40:35.4614670Z Receiving objects:  44% (191/434)
+2022-12-23T10:40:35.4616017Z Receiving objects:  45% (196/434)
+2022-12-23T10:40:35.4616404Z Receiving objects:  46% (200/434)
+2022-12-23T10:40:35.4616785Z Receiving objects:  47% (204/434)
+2022-12-23T10:40:35.4617149Z Receiving objects:  48% (209/434)
+2022-12-23T10:40:35.4618466Z Receiving objects:  49% (213/434)
+2022-12-23T10:40:35.4620654Z Receiving objects:  50% (217/434)
+2022-12-23T10:40:35.4621121Z Receiving objects:  51% (222/434)
+2022-12-23T10:40:35.4622656Z Receiving objects:  52% (226/434)
+2022-12-23T10:40:35.4626282Z Receiving objects:  53% (231/434)
+2022-12-23T10:40:35.4628291Z Receiving objects:  54% (235/434)
+2022-12-23T10:40:35.4628680Z Receiving objects:  55% (239/434)
+2022-12-23T10:40:35.4629133Z Receiving objects:  56% (244/434)
+2022-12-23T10:40:35.4629512Z Receiving objects:  57% (248/434)
+2022-12-23T10:40:35.4629891Z Receiving objects:  58% (252/434)
+2022-12-23T10:40:35.4630256Z Receiving objects:  59% (257/434)
+2022-12-23T10:40:35.4634895Z Receiving objects:  60% (261/434)
+2022-12-23T10:40:35.4642682Z Receiving objects:  61% (265/434)
+2022-12-23T10:40:35.4683913Z Receiving objects:  62% (270/434)
+2022-12-23T10:40:35.4703400Z Receiving objects:  63% (274/434)
+2022-12-23T10:40:35.4707667Z Receiving objects:  64% (278/434)
+2022-12-23T10:40:35.4709969Z Receiving objects:  65% (283/434)
+2022-12-23T10:40:35.4712813Z Receiving objects:  66% (287/434)
+2022-12-23T10:40:35.4715969Z Receiving objects:  67% (291/434)
+2022-12-23T10:40:35.4722619Z Receiving objects:  68% (296/434)
+2022-12-23T10:40:35.4725643Z Receiving objects:  69% (300/434)
+2022-12-23T10:40:35.4732722Z Receiving objects:  70% (304/434)
+2022-12-23T10:40:35.4737067Z Receiving objects:  71% (309/434)
+2022-12-23T10:40:35.4739583Z Receiving objects:  72% (313/434)
+2022-12-23T10:40:35.4744240Z Receiving objects:  73% (317/434)
+2022-12-23T10:40:35.4744818Z Receiving objects:  74% (322/434)
+2022-12-23T10:40:35.4748018Z Receiving objects:  75% (326/434)
+2022-12-23T10:40:35.4752958Z Receiving objects:  76% (330/434)
+2022-12-23T10:40:35.4753477Z Receiving objects:  77% (335/434)
+2022-12-23T10:40:35.4755844Z Receiving objects:  78% (339/434)
+2022-12-23T10:40:35.4757934Z Receiving objects:  79% (343/434)
+2022-12-23T10:40:35.4761019Z Receiving objects:  80% (348/434)
+2022-12-23T10:40:35.4764204Z Receiving objects:  81% (352/434)
+2022-12-23T10:40:35.4766607Z Receiving objects:  82% (356/434)
+2022-12-23T10:40:35.4772481Z Receiving objects:  83% (361/434)
+2022-12-23T10:40:35.4774506Z Receiving objects:  84% (365/434)
+2022-12-23T10:40:35.4775049Z Receiving objects:  85% (369/434)
+2022-12-23T10:40:35.4775439Z Receiving objects:  86% (374/434)
+2022-12-23T10:40:35.4775804Z Receiving objects:  87% (378/434)
+2022-12-23T10:40:35.4777492Z Receiving objects:  88% (382/434)
+2022-12-23T10:40:35.4777925Z Receiving objects:  89% (387/434)
+2022-12-23T10:40:35.4781162Z Receiving objects:  90% (391/434)
+2022-12-23T10:40:35.4786231Z Receiving objects:  91% (395/434)
+2022-12-23T10:40:35.4786759Z Receiving objects:  92% (400/434)
+2022-12-23T10:40:35.4788648Z Receiving objects:  93% (404/434)
+2022-12-23T10:40:35.5924401Z Receiving objects:  94% (408/434)
+2022-12-23T10:40:35.5970412Z Receiving objects:  95% (413/434)
+2022-12-23T10:40:35.6047693Z Receiving objects:  96% (417/434)
+2022-12-23T10:40:35.6145110Z Receiving objects:  97% (421/434)
+2022-12-23T10:40:35.6163168Z Receiving objects:  98% (426/434)
+2022-12-23T10:40:35.6193496Z Receiving objects:  99% (430/434)
+2022-12-23T10:40:35.6196180Z remote: Total 434 (delta 123), reused 430 (delta 123), pack-reused 0        
+2022-12-23T10:40:35.6197027Z Receiving objects: 100% (434/434)
+2022-12-23T10:40:35.6198054Z Receiving objects: 100% (434/434), 18.22 MiB | 44.86 MiB/s, done.
+2022-12-23T10:40:35.6259293Z Resolving deltas:   0% (0/123)
+2022-12-23T10:40:35.6306522Z Resolving deltas:   1% (2/123)
+2022-12-23T10:40:35.6310589Z Resolving deltas:   2% (3/123)
+2022-12-23T10:40:35.6321342Z Resolving deltas:   3% (4/123)
+2022-12-23T10:40:35.6321963Z Resolving deltas:   4% (5/123)
+2022-12-23T10:40:35.6322329Z Resolving deltas:   5% (7/123)
+2022-12-23T10:40:35.6322701Z Resolving deltas:   6% (8/123)
+2022-12-23T10:40:35.6323064Z Resolving deltas:   7% (9/123)
+2022-12-23T10:40:35.6323418Z Resolving deltas:   8% (10/123)
+2022-12-23T10:40:35.6323790Z Resolving deltas:   9% (12/123)
+2022-12-23T10:40:35.6324154Z Resolving deltas:  10% (13/123)
+2022-12-23T10:40:35.6324519Z Resolving deltas:  11% (14/123)
+2022-12-23T10:40:35.6324867Z Resolving deltas:  12% (15/123)
+2022-12-23T10:40:35.6325232Z Resolving deltas:  13% (16/123)
+2022-12-23T10:40:35.6325610Z Resolving deltas:  14% (18/123)
+2022-12-23T10:40:35.6325955Z Resolving deltas:  15% (19/123)
+2022-12-23T10:40:35.6326316Z Resolving deltas:  16% (20/123)
+2022-12-23T10:40:35.6326670Z Resolving deltas:  17% (21/123)
+2022-12-23T10:40:35.6327027Z Resolving deltas:  18% (23/123)
+2022-12-23T10:40:35.6327370Z Resolving deltas:  19% (24/123)
+2022-12-23T10:40:35.6327724Z Resolving deltas:  20% (25/123)
+2022-12-23T10:40:35.6328078Z Resolving deltas:  21% (26/123)
+2022-12-23T10:40:35.6328435Z Resolving deltas:  22% (28/123)
+2022-12-23T10:40:35.6328779Z Resolving deltas:  23% (29/123)
+2022-12-23T10:40:35.6329134Z Resolving deltas:  24% (30/123)
+2022-12-23T10:40:35.6329488Z Resolving deltas:  25% (31/123)
+2022-12-23T10:40:35.6330140Z Resolving deltas:  26% (32/123)
+2022-12-23T10:40:35.6330514Z Resolving deltas:  27% (34/123)
+2022-12-23T10:40:35.6330887Z Resolving deltas:  28% (35/123)
+2022-12-23T10:40:35.6331253Z Resolving deltas:  29% (36/123)
+2022-12-23T10:40:35.6331608Z Resolving deltas:  30% (37/123)
+2022-12-23T10:40:35.6332089Z Resolving deltas:  31% (39/123)
+2022-12-23T10:40:35.6332449Z Resolving deltas:  32% (40/123)
+2022-12-23T10:40:35.6332797Z Resolving deltas:  33% (41/123)
+2022-12-23T10:40:35.6333150Z Resolving deltas:  34% (42/123)
+2022-12-23T10:40:35.6333482Z Resolving deltas:  35% (44/123)
+2022-12-23T10:40:35.6333832Z Resolving deltas:  36% (45/123)
+2022-12-23T10:40:35.6334178Z Resolving deltas:  37% (46/123)
+2022-12-23T10:40:35.6334512Z Resolving deltas:  38% (47/123)
+2022-12-23T10:40:35.6334860Z Resolving deltas:  39% (48/123)
+2022-12-23T10:40:35.6335207Z Resolving deltas:  40% (50/123)
+2022-12-23T10:40:35.6335575Z Resolving deltas:  41% (51/123)
+2022-12-23T10:40:35.6335908Z Resolving deltas:  42% (52/123)
+2022-12-23T10:40:35.6336262Z Resolving deltas:  43% (53/123)
+2022-12-23T10:40:35.6336608Z Resolving deltas:  44% (55/123)
+2022-12-23T10:40:35.6336951Z Resolving deltas:  45% (56/123)
+2022-12-23T10:40:35.6337298Z Resolving deltas:  46% (57/123)
+2022-12-23T10:40:35.6337655Z Resolving deltas:  47% (58/123)
+2022-12-23T10:40:35.6337988Z Resolving deltas:  48% (60/123)
+2022-12-23T10:40:35.6338332Z Resolving deltas:  49% (61/123)
+2022-12-23T10:40:35.6338682Z Resolving deltas:  50% (62/123)
+2022-12-23T10:40:35.6339810Z Resolving deltas:  51% (63/123)
+2022-12-23T10:40:35.6340305Z Resolving deltas:  52% (64/123)
+2022-12-23T10:40:35.6340690Z Resolving deltas:  53% (66/123)
+2022-12-23T10:40:35.6341073Z Resolving deltas:  54% (67/123)
+2022-12-23T10:40:35.6341557Z Resolving deltas:  55% (68/123)
+2022-12-23T10:40:35.6341988Z Resolving deltas:  56% (69/123)
+2022-12-23T10:40:35.6342362Z Resolving deltas:  57% (71/123)
+2022-12-23T10:40:35.6342734Z Resolving deltas:  58% (72/123)
+2022-12-23T10:40:35.6343744Z Resolving deltas:  59% (73/123)
+2022-12-23T10:40:35.6344171Z Resolving deltas:  60% (74/123)
+2022-12-23T10:40:35.6345101Z Resolving deltas:  61% (76/123)
+2022-12-23T10:40:35.6346308Z Resolving deltas:  62% (77/123)
+2022-12-23T10:40:35.6346690Z Resolving deltas:  63% (78/123)
+2022-12-23T10:40:35.6347209Z Resolving deltas:  64% (79/123)
+2022-12-23T10:40:35.6347567Z Resolving deltas:  65% (80/123)
+2022-12-23T10:40:35.6347920Z Resolving deltas:  66% (82/123)
+2022-12-23T10:40:35.6348272Z Resolving deltas:  67% (83/123)
+2022-12-23T10:40:35.6348611Z Resolving deltas:  68% (84/123)
+2022-12-23T10:40:35.6348960Z Resolving deltas:  69% (85/123)
+2022-12-23T10:40:35.6349307Z Resolving deltas:  70% (87/123)
+2022-12-23T10:40:35.6349659Z Resolving deltas:  71% (88/123)
+2022-12-23T10:40:35.6349997Z Resolving deltas:  72% (89/123)
+2022-12-23T10:40:35.6350344Z Resolving deltas:  73% (90/123)
+2022-12-23T10:40:35.6350727Z Resolving deltas:  74% (92/123)
+2022-12-23T10:40:35.6351085Z Resolving deltas:  75% (93/123)
+2022-12-23T10:40:35.6351419Z Resolving deltas:  76% (94/123)
+2022-12-23T10:40:35.6351769Z Resolving deltas:  77% (95/123)
+2022-12-23T10:40:35.6352119Z Resolving deltas:  78% (96/123)
+2022-12-23T10:40:35.6352466Z Resolving deltas:  79% (98/123)
+2022-12-23T10:40:35.6352806Z Resolving deltas:  80% (99/123)
+2022-12-23T10:40:35.6353158Z Resolving deltas:  81% (100/123)
+2022-12-23T10:40:35.6353521Z Resolving deltas:  82% (101/123)
+2022-12-23T10:40:35.6353862Z Resolving deltas:  83% (103/123)
+2022-12-23T10:40:35.6354218Z Resolving deltas:  84% (104/123)
+2022-12-23T10:40:35.6354573Z Resolving deltas:  85% (105/123)
+2022-12-23T10:40:35.6354928Z Resolving deltas:  86% (106/123)
+2022-12-23T10:40:35.6355266Z Resolving deltas:  87% (108/123)
+2022-12-23T10:40:35.6355614Z Resolving deltas:  88% (109/123)
+2022-12-23T10:40:35.6355966Z Resolving deltas:  89% (110/123)
+2022-12-23T10:40:35.6356281Z Resolving deltas:  90% (111/123)
+2022-12-23T10:40:35.6356526Z Resolving deltas:  91% (112/123)
+2022-12-23T10:40:35.6356798Z Resolving deltas:  92% (114/123)
+2022-12-23T10:40:35.6357058Z Resolving deltas:  93% (115/123)
+2022-12-23T10:40:35.6357296Z Resolving deltas:  94% (116/123)
+2022-12-23T10:40:35.6357549Z Resolving deltas:  95% (117/123)
+2022-12-23T10:40:35.6357909Z Resolving deltas:  96% (119/123)
+2022-12-23T10:40:35.6358157Z Resolving deltas:  97% (120/123)
+2022-12-23T10:40:35.6358414Z Resolving deltas:  98% (121/123)
+2022-12-23T10:40:35.6358672Z Resolving deltas:  99% (122/123)
+2022-12-23T10:40:35.6358913Z Resolving deltas: 100% (123/123)
+2022-12-23T10:40:35.6359178Z Resolving deltas: 100% (123/123), done.
+2022-12-23T10:40:35.7324457Z From https://github.com/jortvangorkum-menditect/Test-MxBuild-9.18.2
+2022-12-23T10:40:35.7338870Z  * [new ref]         37f676ef175d9577347588fe27b7a29d8c3459e6 -> origin/main
+2022-12-23T10:40:35.7654951Z ##[endgroup]
+2022-12-23T10:40:35.7655508Z ##[group]Determining the checkout info
+2022-12-23T10:40:35.7657863Z ##[endgroup]
+2022-12-23T10:40:35.7658445Z ##[group]Checking out the ref
+2022-12-23T10:40:35.7670588Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2022-12-23T10:40:36.4055380Z branch 'main' set up to track 'origin/main'.
+2022-12-23T10:40:36.4058453Z Switched to a new branch 'main'
+2022-12-23T10:40:36.4375976Z ##[endgroup]
+2022-12-23T10:40:36.5356706Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format='%H'
+2022-12-23T10:40:36.6196366Z '37f676ef175d9577347588fe27b7a29d8c3459e6'
+2022-12-23T10:40:36.7735000Z ##[group]Run actions/setup-java@v3
+2022-12-23T10:40:36.7735350Z with:
+2022-12-23T10:40:36.7735561Z   java-version: 17
+2022-12-23T10:40:36.7735806Z   distribution: temurin
+2022-12-23T10:40:36.7736060Z   java-package: jdk
+2022-12-23T10:40:36.7736287Z   check-latest: false
+2022-12-23T10:40:36.7736530Z   server-id: github
+2022-12-23T10:40:36.7736787Z   server-username: GITHUB_ACTOR
+2022-12-23T10:40:36.7737095Z   server-password: GITHUB_TOKEN
+2022-12-23T10:40:36.7737360Z   overwrite-settings: true
+2022-12-23T10:40:36.7737617Z   job-status: success
+2022-12-23T10:40:36.7738164Z   token: ***
+2022-12-23T10:40:36.7738368Z ##[endgroup]
+2022-12-23T10:40:37.2636971Z ##[group]Installed distributions
+2022-12-23T10:40:37.3248239Z Resolved Java 17.0.5+8 from tool-cache
+2022-12-23T10:40:37.3252752Z Setting Java 17.0.5+8 as the default
+2022-12-23T10:40:37.3480956Z Creating toolchains.xml for JDK version 17 from temurin
+2022-12-23T10:40:37.3528462Z Writing to C:\Users\runneradmin\.m2\toolchains.xml
+2022-12-23T10:40:37.3556464Z 
+2022-12-23T10:40:37.3562963Z Java configuration:
+2022-12-23T10:40:37.3565046Z   Distribution: temurin
+2022-12-23T10:40:37.3566403Z   Version: 17.0.5+8
+2022-12-23T10:40:37.3569550Z   Path: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.5-8\x64
+2022-12-23T10:40:37.3573860Z 
+2022-12-23T10:40:37.3605516Z ##[endgroup]
+2022-12-23T10:40:37.3658002Z Creating settings.xml with server-id: github
+2022-12-23T10:40:37.3661004Z Writing to C:\Users\runneradmin\.m2\settings.xml
+2022-12-23T10:40:37.4034053Z Prepare all required actions
+2022-12-23T10:40:37.4081407Z ##[group]Run ./.github/actions/download-mxbuild
+2022-12-23T10:40:37.4081780Z with:
+2022-12-23T10:40:37.4082055Z   mxbuild-version: 9.18.2.55931
+2022-12-23T10:40:37.4082422Z   mx-version: 9.18.2
+2022-12-23T10:40:37.4082742Z env:
+2022-12-23T10:40:37.4083119Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.5-8\x64
+2022-12-23T10:40:37.4083692Z   JAVA_HOME_17_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.5-8\x64
+2022-12-23T10:40:37.4084149Z ##[endgroup]
+2022-12-23T10:40:37.4643936Z ##[group]Run curl -L -O https://cdn.mendix.com/runtime/mxbuild-9.18.2.55931.tar.gz
+2022-12-23T10:40:37.4644684Z [36;1mcurl -L -O https://cdn.mendix.com/runtime/mxbuild-9.18.2.55931.tar.gz[0m
+2022-12-23T10:40:37.4645156Z [36;1mmkdir mxbuild-9.18.2[0m
+2022-12-23T10:40:37.4645582Z [36;1mtar -xzf mxbuild-9.18.2.55931.tar.gz -C mxbuild-9.18.2[0m
+2022-12-23T10:40:37.4646079Z [36;1mrm mxbuild-9.18.2.55931.tar.gz[0m
+2022-12-23T10:40:37.6964152Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2022-12-23T10:40:37.6964608Z env:
+2022-12-23T10:40:37.6964981Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.5-8\x64
+2022-12-23T10:40:37.6965570Z   JAVA_HOME_17_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.5-8\x64
+2022-12-23T10:40:37.6966001Z ##[endgroup]
+2022-12-23T10:40:38.3398146Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2022-12-23T10:40:38.3408327Z                                  Dload  Upload   Total   Spent    Left  Speed
+2022-12-23T10:40:38.3411741Z 
+2022-12-23T10:40:38.4191839Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2022-12-23T10:40:39.4029206Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2022-12-23T10:40:40.0652468Z  56  413M   56  234M    0     0   220M      0  0:00:01  0:00:01 --:--:--  220M
+2022-12-23T10:40:40.0690936Z 100  413M  100  413M    0     0   239M      0  0:00:01  0:00:01 --:--:--  239M
+2022-12-23T10:40:57.7053856Z ##[group]Run ./mxbuilds/mxbuild-9.18.2/modeler/mxbuild.exe \
+2022-12-23T10:40:57.7054378Z [36;1m./mxbuilds/mxbuild-9.18.2/modeler/mxbuild.exe \[0m
+2022-12-23T10:40:57.7054724Z [36;1m  --java-home=$JAVA_HOME \[0m
+2022-12-23T10:40:57.7055042Z [36;1m  --java-exe-path=$JAVA_HOME/bin/java.exe \[0m
+2022-12-23T10:40:57.7055363Z [36;1m  --target=package \[0m
+2022-12-23T10:40:57.7055655Z [36;1m  --loose-version-check \[0m
+2022-12-23T10:40:57.7055975Z [36;1m  --output=./out/Test-MxBuild-9.18.2.mda \[0m
+2022-12-23T10:40:57.7056303Z [36;1m  "./project/Test MxBuild.mpr"[0m
+2022-12-23T10:40:57.7069933Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2022-12-23T10:40:57.7070260Z env:
+2022-12-23T10:40:57.7070602Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.5-8\x64
+2022-12-23T10:40:57.7071083Z   JAVA_HOME_17_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.5-8\x64
+2022-12-23T10:40:57.7071476Z ##[endgroup]
+2022-12-23T10:40:57.8524446Z 
+2022-12-23T10:40:57.8526131Z    __  __      ____        _ _     _ 
+2022-12-23T10:40:57.8528665Z   |  \/  |    |  _ \      (_) |   | |
+2022-12-23T10:40:57.8529312Z   | \  / |_  _| |_) |_   _ _| | __| |
+2022-12-23T10:40:57.8531750Z   | |\/| \ \/ /  _ <| | | | | |/ _` |
+2022-12-23T10:40:57.8532327Z   | |  | |>  <| |_) | |_| | | | (_| |
+2022-12-23T10:40:57.8532706Z   |_|  |_/_/\_\____/ \__,_|_|_|\__,_|
+2022-12-23T10:40:57.8534894Z 
+2022-12-23T10:40:57.8535130Z    v9.18.2.55931
+2022-12-23T10:40:57.8535402Z 
+2022-12-23T10:41:06.4736412Z Starting build for Mendix Project file: D:\a\Test-MxBuild-9.18.2\Test-MxBuild-9.18.2\project\Test MxBuild.mpr
+2022-12-23T10:41:06.4746490Z Using the following options:
+2022-12-23T10:41:06.4747351Z  * Build target: Package
+2022-12-23T10:41:06.4750844Z  * Deployment package file: ./out/Test-MxBuild-9.18.2.mda
+2022-12-23T10:41:06.4754011Z Reading project file...
+2022-12-23T10:41:07.4505659Z Building project...
+2022-12-23T10:41:07.4595690Z Executing step 'Synchronize with file system'
+2022-12-23T10:41:07.4598866Z  * Synchronizing with file system...
+2022-12-23T10:41:09.5118682Z Executing step 'Initialize'
+2022-12-23T10:41:09.5532391Z  * Preparing deployment...
+2022-12-23T10:41:09.7695294Z Executing step 'Check prerequisites'
+2022-12-23T10:41:09.8786808Z  * Checking for errors...
+2022-12-23T10:41:12.8282110Z Executing step 'Clean deployment directory'
+2022-12-23T10:41:12.8282737Z  * Cleaning data broker files...
+2022-12-23T10:41:12.8285979Z  * Cleaning deployment directory...
+2022-12-23T10:41:32.1248928Z  * Cleaning web deployment directory...
+2022-12-23T10:41:32.1252141Z  * Cleaning source web deployment directory...
+2022-12-23T10:41:32.1254389Z Executing step 'Perform model transformations'
+2022-12-23T10:41:32.1335431Z  * Applying model transformations...
+2022-12-23T10:41:32.1691555Z Executing step 'Generate deployment files'
+2022-12-23T10:41:32.1700262Z  * Writing files...
+2022-12-23T10:41:39.5752357Z Executing step 'Prepare deployment'
+2022-12-23T10:41:39.5773020Z  * Cleaning web deployment directory...
+2022-12-23T10:41:39.8699381Z Executing step 'Build deployment structure'
+2022-12-23T10:41:39.8703880Z  * Generating data broker files...
+2022-12-23T10:41:39.9550599Z  * Compiling theme files...
+2022-12-23T10:41:39.9615421Z  * Exporting a theme...
+2022-12-23T10:41:40.6343338Z  * Exporting pages...
+2022-12-23T10:41:41.1307364Z  * Exporting metadata...
+2022-12-23T10:41:41.1354210Z  * Exporting microflows model...
+2022-12-23T10:41:41.2449100Z  * Exporting custom widgets...
+2022-12-23T10:41:41.2467050Z  * Bundling custom widgets...
+2022-12-23T10:41:41.2527820Z Executing step 'Clean up'
+2022-12-23T10:41:41.2529008Z  * Cleaning up...
+2022-12-23T10:41:41.2601026Z ERROR: System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+2022-12-23T10:41:41.2602442Z    at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+2022-12-23T10:41:41.2607308Z    at Mendix.Modeler.Utility.Processes.ProcessRunner.RunProcessAsynchronously(Process process, ProcessInfo processInfo) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.Modeler.Utility\Processes\ProcessRunner.cs:line 58
+2022-12-23T10:41:41.2610599Z    at Mendix.Modeler.Utility.Processes.ProcessRunner.RunProcessSynchronously(ProcessInfo processInfo) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.Modeler.Utility\Processes\ProcessRunner.cs:line 44
+2022-12-23T10:41:41.2613222Z    at Mendix.Modeler.WebUI.Export.Packaging.GruntRunner.RunGrunt(String buildFilePath, String deploymentDir) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.Modeler.WebUI.Export\Packaging\GruntRunner.cs:line 33
+2022-12-23T10:41:41.2615994Z    at Mendix.Modeler.WebUI.Deployment.WebUIDeploymentWorker.ExportWidgets(IProject project, IProgressInfo info, DeploymentSettings settings) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.Modeler.WebUI\Deployment\WebUIDeploymentWorker.cs:line 269
+2022-12-23T10:41:41.2618934Z    at Mendix.Modeler.WebUI.Deployment.WebUIDeploymentWorker.DoWork(DeploymentPhase phase, IProject project, DeploymentSettings settings, IProgressInfo info) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.Modeler.WebUI\Deployment\WebUIDeploymentWorker.cs:line 156
+2022-12-23T10:41:41.2622305Z    at Mendix.Modeler.Deployment.DeploymentProcessBuilder.ExecuteDeploymentWorkForPhase(DeploymentPhase phase, IProject project, DeploymentSettings settings, IProgressInfo info) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.Modeler.Deployment\DeploymentProcessBuilder.cs:line 181
+2022-12-23T10:41:41.2625263Z    at Mendix.Modeler.Deployment.DeploymentProcessBuilder.<>c__DisplayClass12_1.<AddBuildStepWithOverride>b__2() in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.Modeler.Deployment\DeploymentProcessBuilder.cs:line 149
+2022-12-23T10:41:41.2627725Z    at Mendix.Modeler.Projects.ProjectStructureManager.<>c__DisplayClass2_0.<DoWithOverride>b__0() in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.Modeler.Core\Projects\ProjectStructureManager.cs:line 41
+2022-12-23T10:41:41.2630124Z    at Mendix.Modeler.Projects.ProjectStructureManager.Do[T](IProject projectOverride, Func`1 action) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.Modeler.Core\Projects\ProjectStructureManager.cs:line 60
+2022-12-23T10:41:41.2632575Z    at Mendix.Modeler.ProtectedModules.ProtectedModulesUnlocker.<>c__DisplayClass3_0.<Do>b__0() in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.Modeler.Core\ProtectedModules\ProtectedModulesUnlocker.cs:line 23
+2022-12-23T10:41:41.2635336Z    at Mendix.Modeler.ProtectedModules.ProtectedModulesUnlocker.ExecuteInContext[T](Boolean unlockImplementation, Func`1 code) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.Modeler.Core\ProtectedModules\ProtectedModulesUnlocker.cs:line 42
+2022-12-23T10:41:41.2637839Z    at Mendix.CommandLine.Shared.Progress.ProcessRunner.Run() in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.CommandLine.Shared\Progress\ProcessRunner.cs:line 41
+2022-12-23T10:41:41.2640045Z    at Mendix.MxBuild.BuildRunner.BuildProject(IProject project, IBuildOptions options, List`1 allowedLocations) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.MxBuild\Build\BuildRunner.cs:line 156
+2022-12-23T10:41:41.2642070Z    at Mendix.MxBuild.BuildRunner.Execute(IBuildOptions options) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.MxBuild\Build\BuildRunner.cs:line 87
+2022-12-23T10:41:41.2644057Z    at Mendix.MxBuild.BuildRunnerMode.ExecuteBuild(IBuildOptions buildOptions) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.MxBuild\Build\BuildRunnerMode.cs:line 50
+2022-12-23T10:41:41.2645971Z    at Mendix.MxBuild.BuildRunnerMode.Run(IList`1 args) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.MxBuild\Build\BuildRunnerMode.cs:line 39
+2022-12-23T10:41:41.2648680Z    at Mendix.MxBuild.ApplicationRunner.Run(IEnumerable`1 args) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.MxBuild\ApplicationRunner.cs:line 42
+2022-12-23T10:41:41.2650989Z    at Mendix.CommandLine.Shared.ProgramHelper.InitializeAndRun[T](Func`2 program, Assembly[] extraAssemblies) in C:\Users\Autobuild\workspace\AppStudio4.0-Build\modeler\Mendix.CommandLine.Shared\ProgramHelper.cs:line 24
+2022-12-23T10:41:41.3344133Z ##[error]Process completed with exit code 1.
+2022-12-23T10:41:41.3555094Z Post job cleanup.
+2022-12-23T10:41:41.6528897Z Post job cleanup.
+2022-12-23T10:41:44.9223483Z [command]"C:\Program Files\Git\bin\git.exe" version
+2022-12-23T10:41:44.9511516Z git version 2.39.0.windows.1
+2022-12-23T10:41:44.9620102Z Temporarily overriding HOME='D:\a\_temp\435aac0f-c4ad-41f3-8e71-3b77a026f3bb' before making global git config changes
+2022-12-23T10:41:44.9630513Z Adding repository directory to the temporary git global config as a safe directory
+2022-12-23T10:41:44.9632846Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Test-MxBuild-9.18.2\Test-MxBuild-9.18.2
+2022-12-23T10:41:45.0017337Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2022-12-23T10:41:45.0368879Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2022-12-23T10:41:45.5960411Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2022-12-23T10:41:45.6277033Z http.https://github.com/.extraheader
+2022-12-23T10:41:45.6321740Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2022-12-23T10:41:45.6678965Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2022-12-23T10:41:46.3176281Z Cleaning up orphan processes
