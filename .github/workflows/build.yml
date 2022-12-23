@@ -23,7 +23,6 @@ jobs:
           mxbuild-version: '9.18.2.55931'
           mx-version: '9.18.2'
       - name: Execute MxBuild 9.18.2
-        working-directory: ./mxbuilds/mx-build-9.18.2
         run: | 
           ./mxbuilds/mx-build-9.18.2/modeler/mxbuild.exe \
             --java-home=$JAVA_HOME \
@@ -31,5 +30,5 @@ jobs:
             --target=package \
             --loose-version-check \
             --log-level=Debug \
-            --output=./out/Test-MxBuild-9.18.2.mda
+            --output=./out/Test-MxBuild-9.18.2.mda \
             ./project/Test MxBuild.mpr
