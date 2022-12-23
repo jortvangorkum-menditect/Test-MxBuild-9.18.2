@@ -2,7 +2,7 @@ name: Build MPKs
 
 on:
   push:
-    branches: [mains]
+    branches: [main]
 
 defaults:
   run:
