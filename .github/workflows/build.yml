@@ -22,6 +22,11 @@ jobs:
         with:
           mxbuild-version: '9.18.2.55931'
           mx-version: '9.18.2'
+      - name: Print directories
+        run: |
+          ls ./mxbuilds
+          ls ./mxbuilds/mx-build-9.18.2
+          ls ./mxbuilds/mx-build-9.18.2/modeler
       - name: Execute MxBuild 9.18.2
         run: | 
           ./mxbuilds/mx-build-9.18.2/modeler/mxbuild.exe \
