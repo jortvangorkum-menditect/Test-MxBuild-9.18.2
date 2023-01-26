@@ -1,6 +1,29 @@
 # Test-MxBuild-9.18.2
 This repository is for testing if the MxBuild 9.18.2 works with GitHub Actions
 
+## Reproducable steps:
+- Create a Mendix application
+- Define a GitHub Actions Workflow which:
+  - sets up java 17
+  - download and unzip the mxbuild version 9.18.2.55931 in the folder "mxbuild-9.18.2" using the command:
+```sh
+curl -L -O https://cdn.mendix.com/runtime/mxbuild-9.18.2.55931.tar.gz
+mkdir mxbuild-9.18.2
+tar -xzf mxbuild-9.18.2.55931.tar.gz -C mxbuild-9.18.2
+rm mxbuild-9.18.2.55931.tar.gz
+```
+
+  - execute the mxbuild with the command:
+```sh
+./mxbuilds/mxbuild-9.18.2/modeler/mxbuild.exe \
+            --java-home=$JAVA_HOME \
+            --java-exe-path=$JAVA_HOME/bin/java.exe \
+            --target=package \
+            --loose-version-check \
+            --output=./out/Test-MxBuild-9.18.2.mda \
+            "./project/Test MxBuild.mpr"
+```
+
 ## File structure explanation
 
 ```powershell
