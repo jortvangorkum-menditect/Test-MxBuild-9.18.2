@@ -28,6 +28,7 @@ jobs:
             --java-home=$JAVA_HOME \
             --java-exe-path=$JAVA_HOME/bin/java.exe \
             --target=package \
+            --log-level=Debug \
             --loose-version-check \
             --output=./out/Test-MxBuild-9.18.2.mda \
             "./project/Test MxBuild.mpr"
