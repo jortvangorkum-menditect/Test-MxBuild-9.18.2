@@ -17,19 +17,19 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Download MxBuild 9.9.0
+      - name: Download MxBuild 9.14.0
         uses: ./.github/actions/download-mxbuild
         with:
-          mxbuild-version: '9.9.0.33734'
-          mx-version: '9.9.0'
-      - name: Execute MxBuild 9.9.0
+          mxbuild-version: '9.14.0.46281'
+          mx-version: '9.14.0'
+      - name: Execute MxBuild 9.14.0
         run: | 
-          ./mxbuilds/mxbuild-9.9.0/modeler/mxbuild.exe \
+          ./mxbuilds/mxbuild-9.14.0/modeler/mxbuild.exe \
             --java-home=$JAVA_HOME \
             --java-exe-path=$JAVA_HOME/bin/java.exe \
             --target=package \
             --log-level=Debug \
             --loose-version-check \
-            --output=./out/Test-MxBuild-9.9.0.mda \
+            --output=./out/Test-MxBuild-9.14.0.mda \
             "./project/Test MxBuild.mpr"
             
