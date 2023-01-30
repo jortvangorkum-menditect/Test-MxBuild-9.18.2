@@ -1,4 +1,4 @@
-import * as exclusionVariables from "../../../theme/native/exclusion-variables";
+import { excludeActivityIndicator, excludeActivityIndicatorHelpers, excludeAnimation, excludeBackgroundImage, excludeBadge, excludeBadgeHelpers, excludeBarChart, excludeBarChartHelpers, excludeBottomSheet, excludeButtons, excludeButtonsHelpers, excludeCarousel, excludeCheckBox, excludeColorPicker, excludeContainer, excludeDatePicker, excludeDropDown, excludeFeedback, excludeFAB, excludeFABHelpers, excludeHelpers, excludeImage, excludeImageHelpers, excludeIntroScreen, excludeIntroScreenHelpers, excludeLayoutGrid, excludeLineChart, excludeLineChartHelpers, excludeListView, excludeListViewHelpers, excludeListViewSwipe, excludeListViewSwipeHelpers, excludeMaps, excludeMapsHelpers, excludePageTitle, excludePopUpMenu, excludeProgressBar, excludeProgressBarHelpers, excludeProgressCircle, excludeProgressCircleHelpers, excludeQRCode, excludeRangeSlider, excludeRangeSliderHelpers, excludeRating, excludeReferenceSelector, excludeSafeAreaView, excludeSlider, excludeSliderHelpers, excludeTabContainer, excludeTabContainerHelpers, excludeTextArea, excludeTextBox, excludeTextBoxHelpers, excludeToggleButtons, excludeTypography, excludeTypographyHelpers, excludeVideoPlayer, excludeWebView } from "../../../theme/native/exclusion-variables";
 // ================================== CORE ==================================\\
 //
 //
@@ -8,8 +8,6 @@ import * as spacing from "./core/base/spacing";
 //
 //
 // Components
-import * as widgetsAccordion from "./core/widgets/accordion";
-import * as helpersAccordion from "./core/helpers/accordion";
 import * as widgetsActivityIndicator from "./core/widgets/activityindicator";
 import * as helpersActivityIndicator from "./core/helpers/activityindicator";
 import * as widgetsAnimation from "./core/widgets/animation";
@@ -45,7 +43,6 @@ import * as widgetsMaps from "./core/widgets/maps";
 import * as helpersMaps from "./core/helpers/maps";
 import * as widgetsNavigation from "./core/widgets/navigation";
 import * as widgetsPageTitle from "./core/widgets/pagetitle";
-import * as widgetsPieDoughnutChart from "./core/widgets/piedoughnutchart";
 import * as widgetsProgressBar from "./core/widgets/progressbar";
 import * as helpersProgressBar from "./core/helpers/progressbar";
 import * as widgetsProgressCircle from "./core/widgets/progresscircle";
@@ -59,8 +56,6 @@ import * as widgetsReferenceSelector from "./core/widgets/referenceselector";
 import * as widgetsSafeAreaView from "./core/widgets/safeareaview";
 import * as widgetsSlider from "./core/widgets/slider";
 import * as helpersSlider from "./core/helpers/slider";
-import * as widgetsSwitch from "./core/widgets/switch";
-import * as helpersSwitch from "./core/helpers/switch";
 import * as widgetsTabContainer from "./core/widgets/tabcontainer";
 import * as helpersTabContainer from "./core/helpers/tabcontainer";
 import * as widgetsTextArea from "./core/widgets/textarea";
@@ -83,78 +78,65 @@ import * as page from "./layouts/page";
 module.exports = [
     flex,
     spacing,
-    !exclusionVariables.excludeAccordion ? widgetsAccordion : {},
-    !exclusionVariables.excludeAccordion && !exclusionVariables.excludeAccordionHelpers ? helpersAccordion : {},
-    !exclusionVariables.excludeActivityIndicator ? widgetsActivityIndicator : {},
-    !exclusionVariables.excludeActivityIndicator && !exclusionVariables.excludeActivityIndicatorHelpers
-        ? helpersActivityIndicator
-        : {},
-    !exclusionVariables.excludeAnimation ? widgetsAnimation : {},
-    !exclusionVariables.excludeBackgroundImage ? widgetsBackgroundImage : {},
-    !exclusionVariables.excludeBadge ? widgetsBadge : {},
-    !exclusionVariables.excludeBadge && !exclusionVariables.excludeBadgeHelpers ? helpersBadge : {},
-    !exclusionVariables.excludeBottomSheet ? widgetsBottomSheet : {},
-    !exclusionVariables.excludeButtons ? widgetsButtons : {},
-    !exclusionVariables.excludeButtons && !exclusionVariables.excludeButtonsHelpers ? helpersButtons : {},
-    !exclusionVariables.excludeCarousel ? widgetsCarousel : {},
-    !exclusionVariables.excludeCheckBox ? widgetsCheckBox : {},
-    !exclusionVariables.excludeColorPicker ? widgetsColorPicker : {},
-    !exclusionVariables.excludeContainer ? widgetsContainer : {},
-    !exclusionVariables.excludeDatePicker ? widgetsDatePicker : {},
-    !exclusionVariables.excludeDropDown ? widgetsDropDown : {},
-    !exclusionVariables.excludeFeedback ? widgetsFeedback : {},
-    !exclusionVariables.excludeFAB ? widgetsFloatingActionButton : {},
-    !exclusionVariables.excludeFAB && !exclusionVariables.excludeFABHelpers ? helpersFloatingActionButton : {},
-    !exclusionVariables.excludeImage ? widgetsImage : {},
-    !exclusionVariables.excludeImage && !exclusionVariables.excludeImageHelpers ? helpersImage : {},
-    !exclusionVariables.excludeIntroScreen ? widgetsIntroScreen : {},
-    !exclusionVariables.excludeIntroScreen && !exclusionVariables.excludeIntroScreenHelpers ? helpersIntroScreen : {},
-    !exclusionVariables.excludeLayoutGrid ? widgetsLayoutGrid : {},
-    !exclusionVariables.excludeLineChart ? widgetsLineChart : {},
-    !exclusionVariables.excludeLineChart && !exclusionVariables.excludeLineChartHelpers ? helpersLineChart : {},
-    !exclusionVariables.excludeBarChart ? widgetsBarChart : {},
-    !exclusionVariables.excludeBarChart && !exclusionVariables.excludeBarChartHelpers ? helpersBarChart : {},
-    !exclusionVariables.excludeListView ? widgetsListView : {},
-    !exclusionVariables.excludeListView && !exclusionVariables.excludeListViewHelpers ? helpersListView : {},
-    !exclusionVariables.excludeListViewSwipe ? widgetsListViewSwipe : {},
-    !exclusionVariables.excludeListViewSwipe && !exclusionVariables.excludeListViewSwipeHelpers
-        ? helpersListViewSwipe
-        : {},
-    !exclusionVariables.excludeMaps ? widgetsMaps : {},
-    !exclusionVariables.excludeMaps && !exclusionVariables.excludeMapsHelpers ? helpersMaps : {},
+    !excludeActivityIndicator ? widgetsActivityIndicator : {},
+    !excludeActivityIndicator && !excludeActivityIndicatorHelpers ? helpersActivityIndicator : {},
+    !excludeAnimation ? widgetsAnimation : {},
+    !excludeBackgroundImage ? widgetsBackgroundImage : {},
+    !excludeBadge ? widgetsBadge : {},
+    !excludeBadge && !excludeBadgeHelpers ? helpersBadge : {},
+    !excludeBottomSheet ? widgetsBottomSheet : {},
+    !excludeButtons ? widgetsButtons : {},
+    !excludeButtons && !excludeButtonsHelpers ? helpersButtons : {},
+    !excludeCarousel ? widgetsCarousel : {},
+    !excludeCheckBox ? widgetsCheckBox : {},
+    !excludeColorPicker ? widgetsColorPicker : {},
+    !excludeContainer ? widgetsContainer : {},
+    !excludeDatePicker ? widgetsDatePicker : {},
+    !excludeDropDown ? widgetsDropDown : {},
+    !excludeFeedback ? widgetsFeedback : {},
+    !excludeFAB ? widgetsFloatingActionButton : {},
+    !excludeFAB && !excludeFABHelpers ? helpersFloatingActionButton : {},
+    !excludeImage ? widgetsImage : {},
+    !excludeImage && !excludeImageHelpers ? helpersImage : {},
+    !excludeIntroScreen ? widgetsIntroScreen : {},
+    !excludeIntroScreen && !excludeIntroScreenHelpers ? helpersIntroScreen : {},
+    !excludeLayoutGrid ? widgetsLayoutGrid : {},
+    !excludeLineChart ? widgetsLineChart : {},
+    !excludeLineChart && !excludeLineChartHelpers ? helpersLineChart : {},
+    !excludeBarChart ? widgetsBarChart : {},
+    !excludeBarChart && !excludeBarChartHelpers ? helpersBarChart : {},
+    !excludeListView ? widgetsListView : {},
+    !excludeListView && !excludeListViewHelpers ? helpersListView : {},
+    !excludeListViewSwipe ? widgetsListViewSwipe : {},
+    !excludeListViewSwipe && !excludeListViewSwipeHelpers ? helpersListViewSwipe : {},
+    !excludeMaps ? widgetsMaps : {},
+    !excludeMaps && !excludeMapsHelpers ? helpersMaps : {},
     widgetsNavigation,
-    !exclusionVariables.excludePageTitle ? widgetsPageTitle : {},
-    !exclusionVariables.excludePieDoughnutChart ? widgetsPieDoughnutChart : {},
-    !exclusionVariables.excludeProgressBar ? widgetsProgressBar : {},
-    !exclusionVariables.excludeProgressBar && !exclusionVariables.excludeProgressBarHelpers ? helpersProgressBar : {},
-    !exclusionVariables.excludeProgressCircle ? widgetsProgressCircle : {},
-    !exclusionVariables.excludeProgressCircle && !exclusionVariables.excludeProgressCircleHelpers
-        ? helpersProgressCircle
-        : {},
-    !exclusionVariables.excludePopUpMenu ? widgetsPopUpMenu : {},
-    !exclusionVariables.excludeQRCode ? widgetsQRCode : {},
-    !exclusionVariables.excludeRangeSlider ? widgetsRangeSlider : {},
-    !exclusionVariables.excludeRangeSlider && !exclusionVariables.excludeRangeSliderHelpers ? helpersRangeSlider : {},
-    !exclusionVariables.excludeRating ? widgetsRating : {},
-    !exclusionVariables.excludeReferenceSelector ? widgetsReferenceSelector : {},
-    !exclusionVariables.excludeSafeAreaView ? widgetsSafeAreaView : {},
-    !exclusionVariables.excludeSlider ? widgetsSlider : {},
-    !exclusionVariables.excludeSlider && !exclusionVariables.excludeSliderHelpers ? helpersSlider : {},
-    !exclusionVariables.excludeSwitch ? widgetsSwitch : {},
-    !exclusionVariables.excludeSwitch && !exclusionVariables.excludeSwitchHelpers ? helpersSwitch : {},
-    !exclusionVariables.excludeTabContainer ? widgetsTabContainer : {},
-    !exclusionVariables.excludeTabContainer && !exclusionVariables.excludeTabContainerHelpers
-        ? helpersTabContainer
-        : {},
-    !exclusionVariables.excludeTextArea ? widgetsTextArea : {},
-    !exclusionVariables.excludeTextBox ? widgetsTextBox : {},
-    !exclusionVariables.excludeTextBox && !exclusionVariables.excludeTextBoxHelpers ? helpersTextBox : {},
-    !exclusionVariables.excludeToggleButtons ? widgetsToggleButtons : {},
-    !exclusionVariables.excludeTypography ? widgetsTypography : {},
-    !exclusionVariables.excludeTypography && !exclusionVariables.excludeTypographyHelpers ? helpersTypography : {},
-    !exclusionVariables.excludeVideoPlayer ? widgetsVideoPlayer : {},
-    !exclusionVariables.excludeWebView ? widgetsWebView : {},
-    !exclusionVariables.excludeHelpers ? helperClasses : {},
+    !excludePageTitle ? widgetsPageTitle : {},
+    !excludeProgressBar ? widgetsProgressBar : {},
+    !excludeProgressBar && !excludeProgressBarHelpers ? helpersProgressBar : {},
+    !excludeProgressCircle ? widgetsProgressCircle : {},
+    !excludeProgressCircle && !excludeProgressCircleHelpers ? helpersProgressCircle : {},
+    !excludePopUpMenu ? widgetsPopUpMenu : {},
+    !excludeQRCode ? widgetsQRCode : {},
+    !excludeRangeSlider ? widgetsRangeSlider : {},
+    !excludeRangeSlider && !excludeRangeSliderHelpers ? helpersRangeSlider : {},
+    !excludeRating ? widgetsRating : {},
+    !excludeReferenceSelector ? widgetsReferenceSelector : {},
+    !excludeSafeAreaView ? widgetsSafeAreaView : {},
+    !excludeSlider ? widgetsSlider : {},
+    !excludeSlider && !excludeSliderHelpers ? helpersSlider : {},
+    !excludeTabContainer ? widgetsTabContainer : {},
+    !excludeTabContainer && !excludeTabContainerHelpers ? helpersTabContainer : {},
+    !excludeTextArea ? widgetsTextArea : {},
+    !excludeTextBox ? widgetsTextBox : {},
+    !excludeTextBox && !excludeTextBoxHelpers ? helpersTextBox : {},
+    !excludeToggleButtons ? widgetsToggleButtons : {},
+    !excludeTypography ? widgetsTypography : {},
+    !excludeTypography && !excludeTypographyHelpers ? helpersTypography : {},
+    !excludeVideoPlayer ? widgetsVideoPlayer : {},
+    !excludeWebView ? widgetsWebView : {},
+    !excludeHelpers ? helperClasses : {},
     layout,
     page
 ].reduce((merged, object) => ({ ...merged, ...object }), {});

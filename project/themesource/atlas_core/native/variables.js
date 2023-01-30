@@ -238,6 +238,7 @@ let input = {
         rippleColor: contrast.lowest
     },
     itemContainer: {
+        maxWidth: 500,
         paddingVertical: 12,
         paddingHorizontal: spacing.regular,
         backgroundColor: background.primary
@@ -317,41 +318,14 @@ let container = {
 };
 container = merge(container, custom.container || {});
 //
-// Accordion Styles
-let accordion = {
-    container: {
-        backgroundColor: background.primary,
-        borderColor: border.color
-    },
-    groupHeader: {
-        container: {
-            paddingVertical: spacing.regular,
-            paddingHorizontal: spacing.regular
-        },
-        heading: {
-            color: font.colorTitle
-        },
-        icon: {
-            size: font.sizeLarge,
-            color: font.colorTitle
-        }
-    },
-    groupContent: {
-        paddingTop: spacing.small,
-        paddingBottom: spacing.large,
-        paddingHorizontal: spacing.regular
-    }
-};
-accordion = merge(accordion, custom.accordion || {});
-//
 // Badge Styles
 let badge = {
     fontWeight: font.weightNormal,
     borderRadius: border.radiusLarge,
-    paddingVertical: spacing.smaller,
+    paddingVertical: spacing.small,
     paddingHorizontal: spacing.small,
     default: {
-        color: contrast.higher,
+        color: contrast.high,
         backgroundColor: contrast.lowest
     },
     primary: {
@@ -424,29 +398,6 @@ let listView = {
     }
 };
 listView = merge(listView, custom.listView || {});
-//
-// Checkbox Styles
-let checkbox = {
-    checkboxInput: {
-        color: brand.primary,
-        size: 20,
-        backgroundColor: background.primary,
-        borderColor: border.color,
-        borderWidth: border.width,
-        borderRadius: border.radiusSmall,
-        width: 40,
-        height: 40
-    },
-    checkboxInputDisabled: {
-        color: brand.primaryLight,
-        backgroundColor: background.secondary
-    },
-    checkboxInputError: {
-        color: brand.danger,
-        borderColor: brand.danger
-    }
-};
-checkbox = merge(checkbox, custom.checkbox || {});
 //
 // Layoutgrid Styles
 let layoutGrid = {
@@ -629,4 +580,4 @@ let slider = {
 slider = merge(slider, custom.slider || {});
 //
 export * from "../../../theme/native/custom-variables";
-export { accordion, brand, backgroundDefaults, background, border, button, contrast, checkbox, fontDefaults, font, input, image, layoutGrid, listView, navigation, spacing, container, tabContainer, badge, floatingActionButton, introScreen, listViewSwipe, progressBar, progressCircle, slider, rating };
+export { brand, backgroundDefaults, background, border, button, contrast, fontDefaults, font, input, image, layoutGrid, listView, navigation, spacing, container, tabContainer, badge, floatingActionButton, introScreen, listViewSwipe, progressBar, progressCircle, slider, rating };

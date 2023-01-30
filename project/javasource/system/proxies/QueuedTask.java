@@ -4,9 +4,6 @@
 
 package system.proxies;
 
-/**
- * Represents a scheduled or running task in a task queue.
- */
 public class QueuedTask
 {
 	private final com.mendix.systemwideinterfaces.core.IMendixObject queuedTaskMendixObject;
@@ -27,18 +24,14 @@ public class QueuedTask
 		Status("Status"),
 		QueueId("QueueId"),
 		QueueName("QueueName"),
-		ContextType("ContextType"),
-		ContextData("ContextData"),
 		MicroflowName("MicroflowName"),
 		UserActionName("UserActionName"),
 		Arguments("Arguments"),
 		XASId("XASId"),
 		ThreadId("ThreadId"),
 		Created("Created"),
-		StartAt("StartAt"),
 		Started("Started"),
-		Retried("Retried"),
-		Retry("Retry");
+		Retried("Retried");
 
 		private java.lang.String metaName;
 
@@ -286,86 +279,6 @@ public class QueuedTask
 	}
 
 	/**
-	 * Set value of ContextType
-	 * @param contexttype
-	 */
-	public final system.proxies.ContextType getContextType()
-	{
-		return getContextType(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of ContextType
-	 */
-	public final system.proxies.ContextType getContextType(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		Object obj = getMendixObject().getValue(context, MemberNames.ContextType.toString());
-		if (obj == null)
-			return null;
-
-		return system.proxies.ContextType.valueOf((java.lang.String) obj);
-	}
-
-	/**
-	 * Set value of ContextType
-	 * @param contexttype
-	 */
-	public final void setContextType(system.proxies.ContextType contexttype)
-	{
-		setContextType(getContext(), contexttype);
-	}
-
-	/**
-	 * Set value of ContextType
-	 * @param context
-	 * @param contexttype
-	 */
-	public final void setContextType(com.mendix.systemwideinterfaces.core.IContext context, system.proxies.ContextType contexttype)
-	{
-		if (contexttype != null)
-			getMendixObject().setValue(context, MemberNames.ContextType.toString(), contexttype.toString());
-		else
-			getMendixObject().setValue(context, MemberNames.ContextType.toString(), null);
-	}
-
-	/**
-	 * @return value of ContextData
-	 */
-	public final java.lang.String getContextData()
-	{
-		return getContextData(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of ContextData
-	 */
-	public final java.lang.String getContextData(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.ContextData.toString());
-	}
-
-	/**
-	 * Set value of ContextData
-	 * @param contextdata
-	 */
-	public final void setContextData(java.lang.String contextdata)
-	{
-		setContextData(getContext(), contextdata);
-	}
-
-	/**
-	 * Set value of ContextData
-	 * @param context
-	 * @param contextdata
-	 */
-	public final void setContextData(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String contextdata)
-	{
-		getMendixObject().setValue(context, MemberNames.ContextData.toString(), contextdata);
-	}
-
-	/**
 	 * @return value of MicroflowName
 	 */
 	public final java.lang.String getMicroflowName()
@@ -582,42 +495,6 @@ public class QueuedTask
 	}
 
 	/**
-	 * @return value of StartAt
-	 */
-	public final java.util.Date getStartAt()
-	{
-		return getStartAt(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of StartAt
-	 */
-	public final java.util.Date getStartAt(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		return (java.util.Date) getMendixObject().getValue(context, MemberNames.StartAt.toString());
-	}
-
-	/**
-	 * Set value of StartAt
-	 * @param startat
-	 */
-	public final void setStartAt(java.util.Date startat)
-	{
-		setStartAt(getContext(), startat);
-	}
-
-	/**
-	 * Set value of StartAt
-	 * @param context
-	 * @param startat
-	 */
-	public final void setStartAt(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date startat)
-	{
-		getMendixObject().setValue(context, MemberNames.StartAt.toString(), startat);
-	}
-
-	/**
 	 * @return value of Started
 	 */
 	public final java.util.Date getStarted()
@@ -687,42 +564,6 @@ public class QueuedTask
 	public final void setRetried(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Long retried)
 	{
 		getMendixObject().setValue(context, MemberNames.Retried.toString(), retried);
-	}
-
-	/**
-	 * @return value of Retry
-	 */
-	public final java.lang.String getRetry()
-	{
-		return getRetry(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of Retry
-	 */
-	public final java.lang.String getRetry(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Retry.toString());
-	}
-
-	/**
-	 * Set value of Retry
-	 * @param retry
-	 */
-	public final void setRetry(java.lang.String retry)
-	{
-		setRetry(getContext(), retry);
-	}
-
-	/**
-	 * Set value of Retry
-	 * @param context
-	 * @param retry
-	 */
-	public final void setRetry(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String retry)
-	{
-		getMendixObject().setValue(context, MemberNames.Retry.toString(), retry);
 	}
 
 	/**

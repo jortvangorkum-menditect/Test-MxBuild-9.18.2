@@ -987,6 +987,29 @@
                     "class": "imageFullSize"
                 }
             ]
+        },
+        {
+            "name": "Resize mode",
+            "type": "Dropdown",
+            "description": "Determines how to resize the image when the parent doesn't match the image dimensions",
+            "options": [
+                {
+                    "name": "Contain",
+                    "class": "imageResizeModeContain"
+                },
+                {
+                    "name": "Center",
+                    "class": "imageResizeModeCenter"
+                },
+                {
+                    "name": "Repeat",
+                    "class": "imageResizeModeRepeat"
+                },
+                {
+                    "name": "Stretch",
+                    "class": "imageResizeModeStretch"
+                }
+            ]
         }
     ],
     "DynamicImageViewer": [
@@ -1038,6 +1061,29 @@
                 {
                     "name": "FullSize",
                     "class": "imageFullSize"
+                }
+            ]
+        },
+        {
+            "name": "Resize mode",
+            "type": "Dropdown",
+            "description": "Determines how to resize the image when the parent doesn't match the image dimensions",
+            "options": [
+                {
+                    "name": "Contain",
+                    "class": "imageResizeModeContain"
+                },
+                {
+                    "name": "Center",
+                    "class": "imageResizeModeCenter"
+                },
+                {
+                    "name": "Repeat",
+                    "class": "imageResizeModeRepeat"
+                },
+                {
+                    "name": "Stretch",
+                    "class": "imageResizeModeStretch"
                 }
             ]
         }
@@ -1924,56 +1970,6 @@
             ]
         }
     ],
-    "com.mendix.widget.native.accordion.Accordion": [
-        {
-            "name": "Compact",
-            "type": "Toggle",
-            "description": "Reduces the spacing in the header and the content.",
-            "class": "accordionCompact"
-        },
-        {
-            "name": "Dividers",
-            "type": "Dropdown",
-            "description": "Configure the dividers between the groups.",
-            "options": [
-                {
-                    "name": "Lined",
-                    "class": "accordionLined"
-                },
-                {
-                    "name": "None",
-                    "class": "accordionDividerNone"
-                }
-            ]
-        },
-        {
-            "name": "Accordion style",
-            "type": "Dropdown",
-            "description": "Style of the Accordion.",
-            "options": [
-                {
-                    "name": "Primary",
-                    "class": "accordionPrimary"
-                },
-                {
-                    "name": "Secondary",
-                    "class": "accordionSecondary"
-                },
-                {
-                    "name": "Success",
-                    "class": "accordionSuccess"
-                },
-                {
-                    "name": "Warning",
-                    "class": "accordionWarning"
-                },
-                {
-                    "name": "Danger",
-                    "class": "accordionDanger"
-                }
-            ]
-        }
-    ],
     "com.mendix.widget.native.badge.Badge": [
         {
             "name": "Badge style",
@@ -2391,27 +2387,6 @@
                 {
                     "name": "Danger",
                     "class": "sliderDanger"
-                }
-            ]
-        }
-    ],
-    "com.mendix.widget.native.switch.Switch": [
-        {
-            "name": "Switch style",
-            "type": "Dropdown",
-            "description": "Style of the switch track color.",
-            "options": [
-                {
-                    "name": "Success",
-                    "class": "switchSuccess"
-                },
-                {
-                    "name": "Warning",
-                    "class": "switchWarning"
-                },
-                {
-                    "name": "Danger",
-                    "class": "switchDanger"
                 }
             ]
         }

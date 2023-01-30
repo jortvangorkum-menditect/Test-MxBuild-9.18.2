@@ -233,6 +233,7 @@ export const input = {
         rippleColor: contrast.lowest
     },
     itemContainer: {
+        maxWidth: 500,
         paddingVertical: 12,
         paddingHorizontal: spacing.regular,
         backgroundColor: background.primary
@@ -299,28 +300,6 @@ export const navigation = {
     }
 };
 //
-// Checkbox styles
-export const checkbox = {
-    checkboxInput: {
-        color: brand.primary,
-        size: 20,
-        backgroundColor: background.primary,
-        borderColor: border.color,
-        borderWidth: border.width,
-        borderRadius: border.radiusSmall,
-        width: 40,
-        height: 40
-    },
-    checkboxInputDisabled: {
-        color: brand.primaryLight,
-        backgroundColor: background.secondary
-    },
-    checkboxInputError: {
-        color: brand.danger,
-        borderColor: brand.danger
-    }
-};
-//
 // Container Styles
 export const container = {
     containerDisabled: {
@@ -328,40 +307,14 @@ export const container = {
     }
 };
 //
-// Accordion Styles
-export const accordion = {
-    container: {
-        backgroundColor: background.primary,
-        borderColor: border.color
-    },
-    groupHeader: {
-        container: {
-            paddingVertical: spacing.regular,
-            paddingHorizontal: spacing.regular
-        },
-        heading: {
-            color: font.colorTitle
-        },
-        icon: {
-            size: font.sizeLarge,
-            color: font.colorTitle
-        }
-    },
-    groupContent: {
-        paddingTop: spacing.small,
-        paddingBottom: spacing.large,
-        paddingHorizontal: spacing.regular
-    }
-};
-//
 // Badge Styles
 export const badge = {
     fontWeight: font.weightNormal,
     borderRadius: border.radiusLarge,
-    paddingVertical: spacing.smaller,
+    paddingVertical: spacing.small,
     paddingHorizontal: spacing.small,
     default: {
-        color: contrast.higher,
+        color: contrast.high,
         backgroundColor: contrast.lowest
     },
     primary: {
@@ -466,8 +419,7 @@ export const floatingActionButton = {
         fontSize: font.sizeSmall
     },
     secondaryButtonCaptionContainer: {
-        backgroundColor: background.primary,
-        borderColor: background.primary
+        backgroundColor: background.primary
     }
 };
 //

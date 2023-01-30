@@ -140,3 +140,24 @@ export const imageIconInfo = {
         color: brand.info
     }
 };
+// Image resize modes
+export const imageResizeModeContain = {
+    image: {
+        resizeMode: "contain"
+    }
+};
+export const imageResizeModeStretch = {
+    image: {
+        resizeMode: "stretch"
+    }
+};
+export const imageResizeModeRepeat = {
+    image: {
+        resizeMode: "repeat"
+    }
+};
+export const imageResizeModeCenter = {
+    image: {
+        resizeMode: "center"
+    }
+};

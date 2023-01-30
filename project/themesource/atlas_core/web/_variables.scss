@@ -50,9 +50,9 @@ $topbar-border-color: $border-color-default !default;
 
 // Topbar mobile
 $m-header-height: 45px !default;
-$m-header-bg: $brand-primary !default;
-$m-header-color: #fff !default;
-$m-header-title-size: 16px !default;
+$m-header-bg: $topbar-bg !default;
+$m-header-color: #555 !default;
+$m-header-title-size: 17px !default;
 
 // Navbar Brand Name / For your company, product, or project name (used in layouts/base/)
 $navbar-brand-name: $font-color-default !default;
@@ -82,7 +82,7 @@ $link-hover-color: darken($link-color, 15%) !default;
 $font-family-import: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" !default;
 
 // Font Family / False = fallback from Bootstrap (Helvetica Neue)
-$font-family-base: "Open Sans", sans-serif !default;
+$font-family-base: "SFProDisplay", "Open Sans", sans-serif !default;
 
 // Font Sizes
 $font-size-large: 18px !default;
@@ -146,9 +146,6 @@ $navsidebar-color-active: #fff !default;
 $navsidebar-sub-color: #aaa !default;
 $navsidebar-sub-color-hover: $brand-primary !default;
 $navsidebar-sub-color-active: $brand-primary !default;
-
-$navsidebar-width-closed: 52px !default;
-$navsidebar-width-open: 232px !default;
 
 // Navigation topbar
 $navtopbar-font-size: $font-size-default !default;
@@ -276,28 +273,28 @@ $header-text-color-detail: rgba(0, 0, 0, 0.2) !default;
 // Color variations
 $color-default-darker: mix($brand-default, black, 60%) !default;
 $color-default-dark: mix($brand-default, black, 70%) !default;
-$color-default-light: mix($brand-default, white, 20%) !default;
-$color-default-lighter: mix($brand-default, white, 10%) !default;
+$color-default-light: mix($brand-default, white, 40%) !default;
+$color-default-lighter: mix($brand-default, white, 20%) !default;
 
 $color-primary-darker: mix($brand-primary, black, 60%) !default;
 $color-primary-dark: mix($brand-primary, black, 70%) !default;
-$color-primary-light: mix($brand-primary, white, 20%) !default;
-$color-primary-lighter: mix($brand-primary, white, 10%) !default;
+$color-primary-light: mix($brand-primary, white, 40%) !default;
+$color-primary-lighter: mix($brand-primary, white, 20%) !default;
 
 $color-success-darker: mix($brand-success, black, 60%) !default;
 $color-success-dark: mix($brand-success, black, 70%) !default;
-$color-success-light: mix($brand-success, white, 20%) !default;
-$color-success-lighter: mix($brand-success, white, 10%) !default;
+$color-success-light: mix($brand-success, white, 40%) !default;
+$color-success-lighter: mix($brand-success, white, 20%) !default;
 
 $color-warning-darker: mix($brand-warning, black, 60%) !default;
 $color-warning-dark: mix($brand-warning, black, 70%) !default;
-$color-warning-light: mix($brand-warning, white, 20%) !default;
-$color-warning-lighter: mix($brand-warning, white, 10%) !default;
+$color-warning-light: mix($brand-warning, white, 40%) !default;
+$color-warning-lighter: mix($brand-warning, white, 20%) !default;
 
 $color-danger-darker: mix($brand-danger, black, 60%) !default;
 $color-danger-dark: mix($brand-danger, black, 70%) !default;
-$color-danger-light: mix($brand-danger, white, 20%) !default;
-$color-danger-lighter: mix($brand-danger, white, 10%) !default;
+$color-danger-light: mix($brand-danger, white, 40%) !default;
+$color-danger-lighter: mix($brand-danger, white, 20%) !default;
 
 $brand-gradient: linear-gradient(to right top, #264ae5, #2239c5, #1b29a6, #111988, #03096c) !default;
 
@@ -514,45 +511,6 @@ $timeline-grouping-size: 120px !default;
 $timeline-grouping-border-radius: 30px !default;
 $timeline-grouping-border-color: $timeline-border-color !default;
 
-//== Accordions
-//## Extended variables for Accordion Widget
-
-// Default
-$accordion-header-default-bg: $bg-color-secondary !default;
-$accordion-header-default-bg-hover: $bg-color !default;
-$accordion-header-default-color: $font-color-header !default;
-$accordion-default-border-color: $border-color-default !default;
-
-$accordion-bg-striped: $grid-bg-striped !default;
-$accordion-bg-striped-hover: $grid-bg-selected !default;
-
-// Semantic background colors
-$accordion-header-primary-bg: $btn-primary-bg !default;
-$accordion-header-secondary-bg: $btn-default-bg !default;
-$accordion-header-success-bg: $btn-success-bg !default;
-$accordion-header-warning-bg: $btn-warning-bg !default;
-$accordion-header-danger-bg: $btn-danger-bg !default;
-
-$accordion-header-primary-bg-hover: $btn-primary-bg-hover !default;
-$accordion-header-secondary-bg-hover: $btn-default-bg-hover !default;
-$accordion-header-success-bg-hover: $btn-success-bg-hover !default;
-$accordion-header-warning-bg-hover: $btn-warning-bg-hover !default;
-$accordion-header-danger-bg-hover: $btn-danger-bg-hover !default;
-
-// Semantic text colors
-$accordion-header-primary-color: $btn-primary-color !default;
-$accordion-header-secondary-color: $btn-default-color !default;
-$accordion-header-success-color: $btn-success-color !default;
-$accordion-header-warning-color: $btn-warning-color !default;
-$accordion-header-danger-color: $btn-danger-color !default;
-
-// Semantic border colors
-$accordion-primary-border-color: $btn-primary-border-color !default;
-$accordion-secondary-border-color: $btn-default-border-color !default;
-$accordion-success-border-color: $btn-success-border-color !default;
-$accordion-warning-border-color: $btn-warning-border-color !default;
-$accordion-danger-border-color: $btn-danger-border-color !default;
-
 //== Spacing
 //## Advanced layout options (used in base/mixins/default-spacing)
 
@@ -709,17 +667,6 @@ $color-info-dark: mix($brand-info, black, 70%) !default;
 $color-info-light: mix($brand-info, white, 60%) !default;
 $color-info-lighter: mix($brand-info, white, 20%) !default;
 
-//== Alerts
-//## Default Bootstrap alerts, not a widget in the Modeler (used in components/alerts)
-
-// Background Color
-$alert-info-bg: $color-primary-lighter !default;
-
-// Text Color
-$alert-info-color: $color-primary-darker !default;
-
-// Border Color
-$alert-info-border-color: $color-primary-dark !default;
 //== Labels
 //## Default Bootstrap Labels, not a widget in the Modeler (used in components/labels)
 
@@ -745,11 +692,3 @@ $groupbox-info-bg: $brand-info !default;
 // Text Color
 $groupbox-inverse-color: #fff !default;
 $groupbox-info-color: #fff !default;
-//== Callout (groupbox) Colors
-//## Extended variables for Groupbox Widget (used in components/groupbox)
-
-// Text and Border Color
-$callout-info-color: $brand-info !default;
-
-// Background Color
-$callout-info-bg: $color-info-lighter !default;

@@ -1,19 +1,34 @@
-.statuspage-section {
-    display: flex;
-    flex-direction: column;
-}
+.statuspage-container {
+    .statuspage-icon {
+        color: white;
+    }
 
-.statuspage-content {
-    flex: 1;
-}
+    .statuspage-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
 
-.statuspage-icon {
-    color: #fff;
-}
+        .row {
+            flex: 1;
 
-.statuspage-subtitle {
-    opacity: 0.6;
-}
+            div:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
 
-.statuspage-buttons {
+    .statuspage-buttons {
+        flex: 0;
+
+        .main-button {
+            display: block;
+            width: 100%;
+        }
+
+        button {
+            font-weight: $font-weight-semibold;
+        }
+    }
 }

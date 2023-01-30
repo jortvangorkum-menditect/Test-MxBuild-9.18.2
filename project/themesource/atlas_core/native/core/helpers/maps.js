@@ -38,7 +38,6 @@ export const mapsSquare = {
 export const mapsMaxSpace = {
     container: {
         flex: 1,
-        minHeight: 50,
         aspectRatio: undefined
     }
 };

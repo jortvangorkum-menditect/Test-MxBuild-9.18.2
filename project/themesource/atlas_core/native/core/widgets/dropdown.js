@@ -81,6 +81,7 @@ export const DropDown = {
     },
     menuWrapper: {
         // All ViewStyle properties are allowed
+        overflow: "hidden",
         borderRadius: input.input.borderRadius,
         shadowColor: "#000",
         shadowOpacity: 0.2,
@@ -90,8 +91,7 @@ export const DropDown = {
     },
     itemContainer: {
         // All ViewStyle properties & rippleColor & activeOpacity & underlayColor are allowed
-        width: "100%",
-        maxWidth: undefined,
+        maxWidth: input.itemContainer.maxWidth,
         paddingVertical: input.itemContainer.paddingVertical,
         paddingHorizontal: input.itemContainer.paddingHorizontal,
         backgroundColor: input.itemContainer.backgroundColor,
@@ -111,8 +111,6 @@ export const DropDown = {
     },
     selectedItemContainer: {
         // All ViewStyle properties are allowed
-        width: "100%",
-        maxWidth: undefined,
         borderWidth: input.selectedItemContainer.borderWidth,
         borderRadius: input.selectedItemContainer.borderRadius,
         borderColor: input.selectedItemContainer.borderColor,
