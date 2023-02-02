@@ -6,7 +6,7 @@ on:
 
 defaults:
   run:
-    shell: bash
+    shell: powershell
 
 jobs:
   build:
@@ -24,12 +24,5 @@ jobs:
           mx-version: '9.15.1'
       - name: Execute MxBuild 9.15.1
         run: | 
-          ./mxbuilds/mxbuild-9.15.1/modeler/mxbuild.exe \
-            --java-home=$JAVA_HOME \
-            --java-exe-path=$JAVA_HOME/bin/java.exe \
-            --target=package \
-            --log-level=Debug \
-            --loose-version-check \
-            --output=./out/Test-MxBuild-9.15.1.mda \
-            "./project/Test MxBuild.mpr"
+          ./mxbuilds/mxbuild-9.15.1/modeler/mxbuild.exe --java-home=$JAVA_HOME --java-exe-path=$JAVA_HOME/bin/java.exe --target=package --log-level=Debug --loose-version-check --output=./out/Test-MxBuild-9.15.1.mda "./project/Test MxBuild.mpr"
             
