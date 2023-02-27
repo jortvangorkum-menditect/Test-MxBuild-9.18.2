@@ -14,6 +14,7 @@ runs:
       shell: powershell
       working-directory: mxbuilds
       run: |
+        $ProgressPreference = "SilentlyContinue" 
         $url = "https://cdn.mendix.com/runtime/mxbuild-${{ inputs.mxbuild-version }}.tar.gz"
         Invoke-WebRequest -Uri $url -OutFile "./mxbuild-${{ inputs.mxbuild-version }}.tar.gz"
         mkdir "./mxbuild-${{ inputs.mx-version }}"
