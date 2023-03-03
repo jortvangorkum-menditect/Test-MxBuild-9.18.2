@@ -17,16 +17,16 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
-      - name: Download MxBuild 9.18.2
+      - name: Download MxBuild 9.22.0
         uses: ./.github/actions/download-mxbuild
         with:
-          mxbuild-version: '9.18.2.55931'
-          mx-version: '9.18.2'
-      - name: Execute MxBuild 9.18.2
+          mxbuild-version: '9.22.0.62233'
+          mx-version: '9.22.0'
+      - name: Execute MxBuild 9.22.0
         run: | 
           $java_home = "$env:JAVA_HOME".TrimEnd('\'); `
           $java_exe_path = Join-Path "$java_home" "\bin\java.exe"; `
-          .\mxbuilds\mxbuild-9.18.2\modeler\mxbuild.exe  `
+          .\mxbuilds\mxbuild-9.22.0\modeler\mxbuild.exe  `
             --java-home="$java_home" `
             --java-exe-path="$java_exe_path" `
             --target=package `
