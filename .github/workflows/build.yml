@@ -20,7 +20,7 @@ jobs:
       - name: Download MxBuild 9.20.0
         uses: ./.github/actions/download-mxbuild
         with:
-          mxbuild-version: '9.20.0.58427'
+          mxbuild-version: '9.20.0.58427' 
           mx-version: '9.20.0'
       - name: Execute MxBuild 9.20.0
         run: | 
