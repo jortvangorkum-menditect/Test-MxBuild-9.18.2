@@ -11,12 +11,10 @@ runs:
   using: "composite"
   steps:
     - name: Download MxBuilds ${{ inputs.mx-version }}
-      shell: powershell
+      shell: bash
       working-directory: mxbuilds
       run: |
-        $ProgressPreference = "SilentlyContinue" 
-        $url = "https://cdn.mendix.com/runtime/net6-mxbuild-${{ inputs.mxbuild-version }}.tar.gz"
-        Invoke-WebRequest -Uri $url -OutFile "./mxbuild-${{ inputs.mxbuild-version }}.tar.gz"
-        mkdir "./mxbuild-${{ inputs.mx-version }}"
-        C:\Windows\System32\tar.exe -xzf "./mxbuild-${{ inputs.mxbuild-version }}.tar.gz" -C "./mxbuild-${{ inputs.mx-version }}"
-        Remove-Item "./mxbuild-${{ inputs.mxbuild-version }}.tar.gz"
+        curl -L -O https://cdn.mendix.com/runtime/net6-mxbuild-${{ inputs.mxbuild-version }}.tar.gz
+        mkdir mxbuild-${{ inputs.mx-version }}
+        tar -xzf net6-mxbuild-${{ inputs.mxbuild-version }}.tar.gz -C mxbuild-${{ inputs.mx-version }}
+        rm net6-mxbuild-${{ inputs.mxbuild-version }}.tar.gz
