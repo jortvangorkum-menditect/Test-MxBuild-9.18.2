@@ -16,5 +16,5 @@ runs:
       run: |
         curl -L -O https://cdn.mendix.com/runtime/mono-mxbuild-${{ inputs.mxbuild-version }}.tar.gz
         mkdir mxbuild-${{ inputs.mx-version }}
-        tar -xzf mxbuild-${{ inputs.mxbuild-version }}.tar.gz -C mxbuild-${{ inputs.mx-version }}
+        tar -xzf mono-mxbuild-${{ inputs.mxbuild-version }}.tar.gz -C mxbuild-${{ inputs.mx-version }}
         rm mxbuild-${{ inputs.mxbuild-version }}.tar.gz
