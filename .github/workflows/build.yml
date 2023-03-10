@@ -26,7 +26,7 @@ jobs:
         run: | 
           $java_home = "$env:JAVA_HOME".TrimEnd('\'); `
           $java_exe_path = Join-Path "$java_home" "\bin\java.exe"; `
-          .\mxbuilds\mxbuild-9.23.0\modeler\mxbuild.exe  `
+          dotnet .\mxbuilds\mxbuild-9.23.0\modeler\mxbuild.dll  `
             --java-home="$java_home" `
             --java-exe-path="$java_exe_path" `
             --target=package `
