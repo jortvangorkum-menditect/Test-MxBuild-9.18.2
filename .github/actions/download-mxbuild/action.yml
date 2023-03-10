@@ -14,7 +14,7 @@ runs:
       shell: bash
       working-directory: mxbuilds
       run: |
-        curl -L -O https://cdn.mendix.com/runtime/win-mxbuild-${{ inputs.mxbuild-version }}.tar.gz
+        curl -L -O https://cdn.mendix.com/runtime/net6-mxbuild-${{ inputs.mxbuild-version }}.tar.gz
         mkdir mxbuild-${{ inputs.mx-version }}
-        tar -xzf win-mxbuild-${{ inputs.mxbuild-version }}.tar.gz -C mxbuild-${{ inputs.mx-version }}
-        rm win-mxbuild-${{ inputs.mxbuild-version }}.tar.gz
+        tar -xzf net6-mxbuild-${{ inputs.mxbuild-version }}.tar.gz -C mxbuild-${{ inputs.mx-version }}
+        rm net6-mxbuild-${{ inputs.mxbuild-version }}.tar.gz
