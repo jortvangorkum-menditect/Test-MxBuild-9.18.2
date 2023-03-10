@@ -15,7 +15,7 @@ runs:
       working-directory: mxbuilds
       run: |
         $ProgressPreference = "SilentlyContinue" 
-        $url = "https://cdn.mendix.com/runtime/win-mxbuild-${{ inputs.mxbuild-version }}.tar.gz"
+        $url = "https://cdn.mendix.com/runtime/net6-mxbuild-${{ inputs.mxbuild-version }}.tar.gz"
         Invoke-WebRequest -Uri $url -OutFile "./mxbuild-${{ inputs.mxbuild-version }}.tar.gz"
         mkdir "./mxbuild-${{ inputs.mx-version }}"
         C:\Windows\System32\tar.exe -xzf "./mxbuild-${{ inputs.mxbuild-version }}.tar.gz" -C "./mxbuild-${{ inputs.mx-version }}"
